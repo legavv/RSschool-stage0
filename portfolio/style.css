@@ -1,0 +1,135 @@
+* {
+    margin: 0px;
+    padding: 0px; 
+    box-sizing: border-box;
+  }
+
+html {
+    scroll-behavior: smooth; 
+  }
+
+body {
+    font-family: "Inter", sans-serif;
+    font-family: "Merriweather", serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 90px;
+    background-image: url("./assets/img/bg.png");
+    background-repeat: no-repeat;
+    background-position: center 0;
+}  
+
+.main {
+    display: flex;
+    flex-direction: column;
+    background-image: url("./assets/img/bg.png");
+    background-position: center -90px;
+    background-repeat: no-repeat;
+}
+
+.footer {
+    border: 2px solid black;
+}
+
+.logo {
+ width: 50px;
+ height: 50px;
+ margin: 20px;
+ padding: 5px 0;
+}
+
+.logo-img {
+    width: 50px;
+    height: 40px;
+}
+
+.nav {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: auto;
+}
+
+.nav-list {
+    display: flex;
+    width: 500px;
+    height: 50px;
+    list-style: none;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.skills, .portfolio, .video, .price, .contacts {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.skills {
+    width: 49px;
+}
+
+.portfolio {
+    width: 81px;
+}
+
+.video {
+    width: 55px;
+}
+
+.price {
+    width: 48px;
+}
+
+.contacts {
+    width: 86px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 20px;
+    color: #FFFFFF;
+  }
+
+.switch-lng {
+    display: flex;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    width: 70px;
+    height: 50px;
+    margin-top: 20px;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.switch-lng-link {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.en {
+    margin-right: 9px;
+}
+
+.ru {
+    margin-left: 8px;
+}
+
+.section {
+ padding: 0px;
+}
+
+
+
+.hero {
+ color: white;
+}
