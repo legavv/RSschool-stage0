@@ -54,11 +54,6 @@ a {
     background-position: center 0;
 }
 
-/* .logo-img {
-    width: 50px;
-    height: 40px;
-} */
-
 .nav {
     font-weight: 400;
     font-size: 20px;
@@ -159,16 +154,17 @@ a {
     padding-top: 10px;
 }
 
-.hire-me-btn {
+.button-gold {
     background: #bdae82;
     width: 220px;
     height: 55px;
     margin-top: 25px;
     text-align: center;
     padding-top: 8px;
+    cursor: pointer
 }
 
-.hire-me-link {
+.link-hire {
     font-size: 20px;
     font-weight: 400;
     color: #000000;
