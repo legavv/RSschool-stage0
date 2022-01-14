@@ -1,6 +1,4 @@
-*,
-*::after,
-*::before {
+* {
     margin: 0px;
     padding: 0px; 
     box-sizing: border-box;
@@ -17,6 +15,11 @@ body {
 a {
     color: inherit;
     text-decoration: none;
+}
+
+h1, h2, h3 {
+    font-size: 100%;
+    font-weight: normal;
 }
 
 .container {
@@ -45,7 +48,7 @@ a {
  background-image: url("./assets/svg/logo.svg");
  background-repeat: no-repeat;
  background-position: center 0;
- transition: 0.3s;
+ transition: 0.5s;
 }
 
 .logo:hover {
@@ -96,7 +99,7 @@ a {
 
 .nav-link, .switch-lng-link {
     font-size: 20px;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
 .switch-lng {
@@ -109,11 +112,11 @@ a {
 
 .en {
     color: #bdae82;
-    margin-right: 9px;
+    margin-right: 10px;
 }
 
 .ru {
-    margin-left:9px;
+    margin-left:10px;
 }
 
 .bg {
@@ -145,23 +148,29 @@ a {
     vertical-align: middle;
 }
 
-.h1 {
-    font-size: 100%;
-    font-weight: normal;
-}
-
 .hero-text {
     padding-top: 10px;
 }
 
 .button-gold {
-    background: #bdae82;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #bdae82;
     width: 220px;
     height: 55px;
     margin-top: 25px;
     text-align: center;
-    padding-top: 8px;
-    cursor: pointer
+    padding-left: 2px;
+    cursor: pointer;
+    border: 0;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.button-gold:hover {
+    color: #ffffff;
 }
 
 .link-hire {
@@ -186,24 +195,6 @@ a {
     align-items: center;
     padding-top: 100px;
 }
- 
-.skills-items {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 1400px;
-    height: 242px;
-    margin-top: 60px;
-    background: coral;
-}
-
-.skills-item {
-    display: flex;
-    flex-direction: column;
-    width: 320px;
-}
-
-
 
 .section-title {
     display: flex;
@@ -215,8 +206,8 @@ a {
 
 .line-section {
     width: 274px;
-    height: 41px;
-    border-bottom: 2px solid #bdae82;
+    height: 50%;
+    border-bottom: 3px solid #bdae82;
 }
 
 .title-section {
@@ -229,10 +220,65 @@ a {
     padding-top: 15px;
 }
 
-.h2 {
-    font-size: 100%;
-    font-weight: normal;
+.skills-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1400px;
+    height: 242px;
+    margin-top: 60px;
 }
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 320px;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.skill-item:nth-child(1) {
+    background-image: url("./assets/svg/camera.png");
+    background-size: 72px 58px;
+  }
+
+  .skill-item:nth-child(2) {
+    background-image: url("./assets/svg/video.svg");
+    background-size: 60px 50px;
+  }
+
+  .skill-item:nth-child(3) {
+    background-image: url("./assets/svg/image.svg");
+    background-size: 66px 50px;
+  }
+
+  .skill-item:nth-child(4) {
+    background-image: url("./assets/svg/mic.svg");
+    background-size: 32px 50px;
+  }
+
+.item-title {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+    height: 40px;
+  }
+
+.item-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 36px;
+    height: 92px;
+    padding-top: 10px;
+    padding-left: 3px;
+    color: #ffffff;
+    text-align: center;
+}
+
+
 
 
 .test {
