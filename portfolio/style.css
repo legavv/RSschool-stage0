@@ -116,7 +116,7 @@ h1, h2, h3 {
 }
 
 .ru {
-    margin-left:10px;
+    margin-left:9px;
 }
 
 .bg {
@@ -194,6 +194,8 @@ h1, h2, h3 {
     flex-direction: column;
     align-items: center;
     padding-top: 100px;
+    width: 1400px; 
+    height: 482px;
 }
 
 .section-title {
@@ -232,13 +234,15 @@ h1, h2, h3 {
 .skill-item {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 320px;
-    background-position: center top;
-    background-repeat: no-repeat;
+    height: 242px;
+    align-items: center;
+    /* background-position: center top;
+    background-repeat: no-repeat; */
 }
 
-.skill-item:nth-child(1) {
+/* .skill-item:nth-child(1) {
     background-image: url("./assets/svg/camera.png");
     background-size: 72px 58px;
   }
@@ -256,24 +260,28 @@ h1, h2, h3 {
   .skill-item:nth-child(4) {
     background-image: url("./assets/svg/mic.svg");
     background-size: 32px 50px;
-  }
+  } */
+
+.item-img {
+    height: 50px;
+    margin: 0 auto;
+}
 
 .item-title {
-    font-family: "Inter", sans-serif;
     font-weight: 700;
     font-size: 20px;
-    text-align: center;
+    line-height: 30px;
     color: #ffffff;
     height: 40px;
+    margin-top: 50px;
   }
 
 .item-text {
     font-weight: 400;
     font-size: 18px;
     line-height: 36px;
-    height: 92px;
-    padding-top: 10px;
-    padding-left: 3px;
+    height: 90px;
+    padding-top: 8px;
     color: #ffffff;
     text-align: center;
 }
