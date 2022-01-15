@@ -290,11 +290,11 @@ h1, h2, h3 {
     padding-top: 15px;
 }
 
-.portfolio-btn {
+.portfolio-btns {
     display: flex;
     width: 895px;
     height: 55px;
-    margin: 35px auto 0 auto;
+    margin: 60px auto 0 auto;
     gap: 5px;
     
 }
@@ -305,7 +305,6 @@ h1, h2, h3 {
     background-color: transparent;
     width: 220px;
     height: 55px;
-    margin-top: 25px;
     text-align: center;
     padding-left: 2px;
     cursor: pointer;
@@ -321,6 +320,18 @@ h1, h2, h3 {
     color: #ffffff;
 }
 
+.btngold {
+    background-color: #bdae82;
+    color: #000000;
+}
+
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 60px;
+    row-gap: 20px;
+}
 .footer {
     display: flex;
     border: 2px solid black;
