@@ -102,6 +102,10 @@ h1, h2, h3 {
     color: #ffffff;
   }
 
+.nav-link:hover {
+    color: #bdae82;
+}
+
 .switch-lng {
     display: flex;
     font-weight: 700;
@@ -320,6 +324,11 @@ h1, h2, h3 {
     color: #ffffff;
 }
 
+.button-transp:focus {
+    background: #bdae82;
+    color: #000000;
+}
+
 .btngold {
     background-color: #bdae82;
     color: #000000;
@@ -494,8 +503,8 @@ h1, h2, h3 {
     font-size: 20px;
     font-weight:4500;
     color: #bdae82;
-    padding-left: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
+    padding-left: 18px;
+    background: rgba(0, 0, 0, 0.5);
 } 
 
 .contacts-email {
@@ -504,7 +513,7 @@ h1, h2, h3 {
 }
 
 .contacts-email::placeholder {
-    /* filter: brightness(1.5); */
+    color: #bdae82;
   }
 
   .contacts-tel {
@@ -513,6 +522,7 @@ h1, h2, h3 {
   }
 
   .contacts-tel::placeholder {
+    color: #bdae82;
 }
 
   .contacts-textarea {
@@ -525,7 +535,7 @@ h1, h2, h3 {
   .contacts-textarea::placeholder {
     position: absolute;
     padding-top: 10px;
-    
+    color: #bdae82;
 }
 
   .button-contacts {
@@ -569,12 +579,31 @@ h1, h2, h3 {
     color: #ffffff;
 }
 
-.footer-year, .footer-github {
+.footer-year {
     padding: 50px 0 0 22px;
+}
+
+.footer-github {
+    padding: 50px 0 0 22px;
+    transition: 0.5s;
+}
+
+.footer-github:hover {
+    color: #bdae82;
 }
 
 .footer-rss {
     padding: 50px 0 0 425px;
+    transition: 0.5s;
+}
+
+.footer-rss:hover {
+    color: #bdae82;
+}
+
+.list-social-net {
+    display: flex;
+    list-style-type: none;
 }
 
 .footer-inst {
@@ -591,4 +620,9 @@ h1, h2, h3 {
 
 .footer-pin {
     padding: 60px 0 0 25px;
+}
+
+.footer-inst:hover, .footer-fb:hover, .footer-twitter:hover, .footer-pin:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
 }
