@@ -288,6 +288,7 @@ h1, h2, h3 {
     font-size: 40px;
     color: #bdae82;
     padding-top: 15px;
+    padding-right: 1px;
 }
 
 .portfolio-btns {
@@ -306,7 +307,6 @@ h1, h2, h3 {
     width: 220px;
     height: 55px;
     text-align: center;
-    padding-left: 2px;
     cursor: pointer;
     border: 2px solid #bdae82;
     font-family: inherit;
@@ -378,6 +378,7 @@ h1, h2, h3 {
 
 .section-price {
     padding-top: 100px;
+    height: 845px;
 }
 
 .line-price {
@@ -459,8 +460,135 @@ h1, h2, h3 {
     color: #ffffff;
 }
 
+.section-contacts {
+    display: flex;
+    justify-content: flex-end;
+    background: url(./assets/img/contacts.jpg);
+    background-size: auto 700px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 700px;
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    margin: 60px 20px 0 0 ;
+    width: 450px;
+}
+
+.contacts-title {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 80px;
+    color: #bdae82;
+}
+
+.contacts-email, .contacts-tel, .contacts-textarea {
+    background: transparent;
+    border: 2px solid #bdae82;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight:4500;
+    color: #bdae82;
+    padding-left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+} 
+
+.contacts-email {
+    margin-top: 40px;
+    height: 50px;
+}
+
+.contacts-email::placeholder {
+    /* filter: brightness(1.5); */
+  }
+
+  .contacts-tel {
+    margin-top: 20px;
+    height: 50px;
+  }
+
+  .contacts-tel::placeholder {
+}
+
+  .contacts-textarea {
+      position: relative;
+      margin-top: 20px;
+      height: 100px;
+      resize: none;
+  }
+
+  .contacts-textarea::placeholder {
+    position: absolute;
+    padding-top: 10px;
+    
+}
+
+  .button-contacts {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #bdae82;
+    width: 220px;
+    height: 55px;
+    text-align: center;
+    padding-left: 2px;
+    cursor: pointer;
+    border: 0;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 20px;
+    color:#000000;
+    transition: 0.5s;
+    margin: 30px auto 0 0;
+}
+
+.button-contacts:hover {
+    color: #ffffff;
+}
 
 .footer {
     display: flex;
-    border: 2px solid black;
+    height: 150px;
+    background: #000000;
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.footer-dev-sign {
+    padding: 67px 0 0 20px;
+}
+
+.footer-year, .footer-github, .footer-rss {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 50px;
+    color: #ffffff;
+}
+
+.footer-year, .footer-github {
+    padding: 50px 0 0 22px;
+}
+
+.footer-rss {
+    padding: 50px 0 0 425px;
+}
+
+.footer-inst {
+    padding: 60px 0 0 412px
+}
+
+.footer-fb {
+    padding: 60px 0 0 29px;
+}
+
+.footer-twitter {
+    padding: 64px 0 0 29px;
+}
+
+.footer-pin {
+    padding: 60px 0 0 25px;
 }
