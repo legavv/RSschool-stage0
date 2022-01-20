@@ -3,38 +3,30 @@
     padding: 0px; 
     box-sizing: border-box;
   }
-
 html {
     scroll-behavior: smooth; 
   }
-
 body {
     font-family: "Inter", sans-serif;
     background: #000000;
-    min-width: 1440px;
+    overflow-x: hidden;
 }
-
 a {
     color: inherit;
     text-decoration: none;
 }
-
 h1, h2, h3 {
     font-size: 100%;
     font-weight: normal;
 }
-
-@media (max-width: 768px) {
-    .container {
-        width: 644px;
-    }
-  }
-
 .container {
     max-width: 1440px;
     padding: 0 20px;
     margin: 0 auto;
 }
+
+
+/* HEADER */
 
 .header {
     display: flex;
@@ -44,11 +36,9 @@ h1, h2, h3 {
     background-repeat: no-repeat;
     background-position: center 0;
 }  
-
 .logo, .nav, .switch-lng {
     margin-top: 20px;
 }
-
 .logo {
  width: 50px;
  height: 50px;
@@ -58,19 +48,16 @@ h1, h2, h3 {
  background-position: center 0;
  transition: 0.5s;
 }
-
 .logo:hover {
     background-image: url("./assets/svg/logo-hover.svg");
     background-repeat: no-repeat;
     background-position: center 0;
 }
-
 .nav {
     font-weight: 400;
     font-size: 20px;
     margin-left: auto;
 }
-
 .nav-list {
     display: flex;
     width: 500px;
@@ -79,42 +66,33 @@ h1, h2, h3 {
     justify-content: flex-start;
     align-items: center;
 }
-
 .skills, .portfolio, .video, .price, .contacts {
     display: inline-block;
     margin-left: 30px;
 }
-
 .skills {
     width: 49px;
 }
-
 .portfolio {
     width: 81px;
 }
-
 .video {
     width: 55px;
 }
-
 .price {
     width: 48px;
 }
-
 .contacts {
     width: 86px;
 }
-
 .nav-link, .switch-lng-link {
     font-size: 20px;
     color: #ffffff;
     transition: 0.5s;
   }
-
 .nav-link:hover {
     color: #bdae82;
 }
-
 .switch-lng {
     display: flex;
     font-weight: 700;
@@ -122,19 +100,19 @@ h1, h2, h3 {
     height: 50px;
     align-items: center;
 }
-
 .en {
     color: #bdae82;
     margin-right: 10px;
 }
-
 .ru {
     margin-left: 8px;
 }
-
 .ru:hover {
     color: #bdae82;
 }
+
+
+/* SECTION HERO */
 
 .bg {
     background-image: url("./assets/img/bg.jpg");
@@ -143,7 +121,6 @@ h1, h2, h3 {
     height: 820px;
     padding-top: 160px;
 }
-
 .hero {
     font-weight: 400;
     font-size: 20px;
@@ -153,7 +130,6 @@ h1, h2, h3 {
     height: 330px;
     margin-left: 60px;  
 }
-
 .hero-title {
     display: flex;
     align-items: center;
@@ -164,11 +140,10 @@ h1, h2, h3 {
     height: 120px;
     vertical-align: middle;
 }
-
 .hero-text {
-    padding-top: 10px;
-}
+    padding: 10px 20px 0 0;
 
+}
 .button-gold {
     display: inline-block;
     text-decoration: none;
@@ -184,23 +159,23 @@ h1, h2, h3 {
     font-weight: 400;
     font-size: 20px;
 }
-
 .button-gold:hover {
     color: #ffffff;
     transition: 1s;
 }
-
 .link-hire {
     font-size: 20px;
     font-weight: 400;
     color: #000000;
 }
-
 .hire-me-link:hover {
     font-size: 20px;
     font-weight: 400;
     color: #ffffff;
 }
+
+
+/* SECTION SKILLS */
 
 .section-skills {
     display: flex;
@@ -209,7 +184,6 @@ h1, h2, h3 {
     padding-top: 100px;
     height: 482px;
 }
-
 .section-title {
     display: flex;
     justify-content: space-between;
@@ -217,13 +191,11 @@ h1, h2, h3 {
     height: 80px;
     margin: 0 auto;
 }
-
 .line-section {
     height: 50%;
     border-bottom: 2px solid #bdae82;
     width: 274px;
 }
-
 .title-section {
     font-family: 'Merriweather', serif;
     font-weight: 700;
@@ -233,7 +205,6 @@ h1, h2, h3 {
     text-align: center;
     padding-top: 15px;
 }
-
 .skills-items {
     display: flex;
     justify-content: space-between;
@@ -241,7 +212,6 @@ h1, h2, h3 {
     height: 242px;
     margin-top: 60px;
 }
-
 .skill-item {
     display: flex;
     flex-direction: column;
@@ -251,16 +221,13 @@ h1, h2, h3 {
     margin-left: 40px;
     align-items: center;
 }
-
 .skill-item:first-child {
     margin-left: 0px;
 }
-
 .skill-img {
     height: 50px;
     margin: 0 auto;
 }
-
 .skill-title {
     font-weight: 700;
     font-size: 20px;
@@ -269,7 +236,6 @@ h1, h2, h3 {
     height: 40px;
     margin-top: 50px;
   }
-
 .skill-text {
     font-weight: 400;
     font-size: 18px;
@@ -280,23 +246,23 @@ h1, h2, h3 {
     text-align: center;
 }
 
+
+/* SECTION PORTFOLIO */
+
 .section-portfolio {
     height: 1500px;
     padding-top: 100px;
 }
-
 .line-portfolio-left {
     height: 50%;
     border-bottom: 2px solid #bdae82;
     width: 240px;
 }
-
 .line-portfolio-right {
     height: 50%;
     border-bottom: 2px solid #bdae82;
     width: 239px;
 }
-
 .title-section-portfolio {
     font-family: 'Merriweather', serif;
     font-weight: 700;
@@ -305,7 +271,6 @@ h1, h2, h3 {
     padding-top: 15px;
     padding-right: 1px;
 }
-
 .portfolio-btns {
     display: flex;
     flex-wrap: wrap;
@@ -315,7 +280,6 @@ h1, h2, h3 {
     gap: 5px;
     
 }
-
 .button-transp {
     display: inline-block;
     text-decoration: none;
@@ -330,23 +294,19 @@ h1, h2, h3 {
     font-size: 20px;
     color:#bdae82;
 }
-
 .button-transp:hover {
     transition: 1s;
     color: #ffffff;
 }
-
 .button-transp:focus {
     background: #bdae82;
     color: #000000;
     transition: 1s;
 }
-
 .btngold {
     background-color: #bdae82;
     color: #000000;
 }
-
 .portfolio-items {
     display: flex;
     flex-wrap: wrap;
@@ -355,17 +315,18 @@ h1, h2, h3 {
     row-gap: 20px;
 }
 
+
+/* SECTION VIDEO */
+
 .section-video {
     padding-top: 100px;
     height: 945px;
 }
-
 .line-video {
     height: 50%;
     border-bottom: 2px solid #bdae82;
     width: 273px;
 }
-
 .title-section-video {
     font-family: 'Merriweather', serif;
     font-weight: 700;
@@ -373,14 +334,13 @@ h1, h2, h3 {
     color: #bdae82;
     padding-top: 15px;
 }
-
 .video-player {
     position: relative;
     height: 705px;
     background-image: url(./assets/img/video-player.jpg);
+    background-repeat: no-repeat;
     margin-top: 60px;
 }
-
 .video-btn {
     background-color: transparent;
     border: 0;
@@ -392,11 +352,13 @@ h1, h2, h3 {
     cursor: pointer;
     transition: 0.5s;
 }
-
 .video-btn:hover {
         filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
         contrast(87%);
 }
+
+
+/* SECTION PRICE */
 
 .section-price {
     padding-top: 100px;
@@ -643,4 +605,170 @@ h1, h2, h3 {
     filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
     transition: 1s;
+}
+
+@media (max-width:1440px) {
+    .container {
+        max-width: 768px;
+        padding: 0px;
+    }
+    .header,.bg {
+        background-image: url("./assets/img/bg_tablet.jpg");
+        padding: 0 60px;
+    }
+    .header {
+        justify-content: flex-start;
+    }
+    .nav {
+        display: none;
+    }
+    .switch-lng {
+        margin-left: 441px;
+    }
+    .ru {
+        margin-left: 20px;
+    }
+/* SECTION HERO     */
+    .bg {
+        height: 500px;
+    }
+    .hero {
+        line-height: 24.2px;
+        height: 400px;
+        margin: 0px;  
+        padding-top: 80px;
+    }
+    .hero-title {
+        font-weight: 400;
+        font-size: 32px;
+        width: 165px;
+        height: 64px;
+    }
+    .hero-text {
+        padding-top: 17px;
+        padding-right: 80px;
+    }
+    .button-gold {
+        width: 219px;
+        height: 54px;
+        margin-top: 60px;
+    }
+/* SECTION SKILLS */
+    .section-skills {
+        height: 725px;
+        padding: 83px 60px 0 60px;
+    }
+    .section-title {
+        width: 364px;
+    }
+    .line-section {
+        width: 116px;
+        height: 67%;
+    }
+    .title-section {
+        font-size: 32px;
+        line-height: 40.22px;
+        width: 131px;
+        padding-top: 17px;
+    }
+    .skills-items {
+        height: 729px;
+        margin-top: 63px;
+    }
+    .skill-item {
+        width: 300px;
+        height: 224px;
+        margin-left: 40px;
+        align-items: center;
+        padding-right: 4px;
+    }
+    .skill-item:nth-child(odd) {
+        margin-left: 0px;
+        padding-left: 4px;
+    }
+    .skill-title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 40px;
+        margin-top: 0px;
+        padding-top: 10px;
+      }
+    .skill-text {
+        line-height: 21.78px;
+        padding-top: 8px;
+    }
+/* SECTION PORTFOLIO */
+    .section-portfolio {
+        height: 3870px;
+        padding-top: 80px;
+    }
+    .line-portfolio-left, .line-portfolio-right{
+        height: 55%;
+        width: 89px;
+    }
+    .title-section-portfolio {
+        font-size: 32px;
+        line-height: 80px;
+        padding-top: 3px;
+    }
+    .portfolio-btns {
+        width: 445px;
+        height: 115px;
+        margin: 55px auto 0 auto;
+    }
+    .portfolio-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 60px;
+        row-gap: 20px;
+    }
+    .portfolio-img {
+        height: 565px;
+    }
+/* SECTION VIDEO */
+    .section-video {
+        padding-top: 80px;
+        height: 628px;
+    }
+    .line-video {
+        height: 55%;
+        width: 116px;
+    }
+    .title-section-video {
+        font-size: 32px;
+        line-height: 80px;
+        padding-top: 2px;
+    }
+    .video-player {
+        background-image: url(./assets/img/video-player-tablet.jpg);
+        background-repeat: no-repeat;
+        position: relative; 
+        height: 418px;
+        margin-top: 55px;
+    } 
+    .video-btn {
+        background-color: transparent;
+        border: 0;
+        position: absolute;
+        width: 64.62px;
+        height: 64.69px;
+        left: 350.01px;
+        top: 176.79px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .video-btn-img {
+        max-width: 100%;
+    }
+    .video-btn:hover {
+            filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+            contrast(87%);
+    }
+/* SECTION PRICE */
+
+
+    
+
+   
 }
