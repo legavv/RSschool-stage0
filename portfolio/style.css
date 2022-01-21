@@ -364,13 +364,11 @@ h1, h2, h3 {
     padding-top: 100px;
     height: 845px;
 }
-
 .line-price {
     height: 50%;
     border-bottom: 2px solid #bdae82;
     width: 280px;
 }
-
 .title-section-price {
     font-family: 'Merriweather', serif;
     font-weight: 700;
@@ -378,7 +376,6 @@ h1, h2, h3 {
     color: #bdae82;
     padding-top: 15px;
 }
-
 .price-items {
     display: flex;
     flex-wrap: wrap;
@@ -386,7 +383,6 @@ h1, h2, h3 {
     margin-top: 60px;
     gap: 26px;
 }
-
 .price-item {
     display: flex;
     flex-direction: column;
@@ -394,7 +390,6 @@ h1, h2, h3 {
     height: 505px;
     flex-grow: 1;
 }
-
 .price-item-title {
     font-family: 'Merriweather', serif;
     font-weight: 700;
@@ -403,7 +398,6 @@ h1, h2, h3 {
     margin: 40px auto 0 auto;
     color: #ffffff;
 }
-
 .price-quantity {
     font-family: 'Merriweather', serif;
     font-weight: 700;
@@ -412,7 +406,6 @@ h1, h2, h3 {
     margin: 20px auto 20px auto;
     color: #bdae82;
 }
-
 .price-item-text {
     display: block;
     font-weight: 400;
@@ -422,7 +415,6 @@ h1, h2, h3 {
     text-align: center;
     margin: 0 auto;
 }
-
 .button-price {
     display: inline-block;
     text-decoration: none;
@@ -439,11 +431,13 @@ h1, h2, h3 {
     color:#000000;
     margin: 40px auto 0 auto;
 }
-
 .button-price:hover {
     transition: 1s;
     color: #ffffff;
 }
+
+
+/* SECTION CONTACTS */
 
 .section-contacts {
     display: flex;
@@ -456,14 +450,12 @@ h1, h2, h3 {
     width: 1440px;
     margin: 0 auto;
 }
-
 .contacts-container {
     display: flex;
     flex-direction: column;
     margin: 60px 20px 0 0 ;
     width: 450px;
 }
-
 .contacts-title {
     font-family: 'Merriweather', serif;
     font-weight: 700;
@@ -471,7 +463,6 @@ h1, h2, h3 {
     line-height: 80px;
     color: #bdae82;
 }
-
 .contacts-email, .contacts-tel, .contacts-textarea {
     background: transparent;
     border: 2px solid #bdae82;
@@ -482,26 +473,21 @@ h1, h2, h3 {
     padding-left: 18px;
     background: rgba(0, 0, 0, 0.5);
 } 
-
 .contacts-email {
     margin-top: 40px;
     height: 50px;
 }
-
 .contacts-email::placeholder {
     color: #bdae82;
   }
-
-  .contacts-tel {
+.contacts-tel {
     margin-top: 20px;
     height: 50px;
   }
-
-  .contacts-tel::placeholder {
+.contacts-tel::placeholder {
     color: #bdae82;
 }
-
-  .contacts-textarea {
+.contacts-textarea {
       position: relative;
       margin-top: 20px;
       height: 100px;
@@ -509,14 +495,12 @@ h1, h2, h3 {
       height: 100px;
       overflow: auto;
   }
-
-  .contacts-textarea::placeholder {
+.contacts-textarea::placeholder {
     position: absolute;
     padding-top: 10px;
     color: #bdae82;
 }
-
-  .button-contacts {
+.button-contacts {
     display: inline-block;
     text-decoration: none;
     background-color: #bdae82;
@@ -532,75 +516,72 @@ h1, h2, h3 {
     color:#000000;
     margin: 30px auto 0 0;
 }
-
 .button-contacts:hover {
     transition: 1s;
     color: #ffffff;
 }
 
+
+/* SECTION FOOTER */
+
 .footer {
     display: flex;
+    justify-content: space-between;
     height: 150px;
     width: 1440px;
     margin: 0 auto;
 }
-
+.footer-year-github {
+    display: flex;
+}
 .footer-dev-sign {
     padding: 62px 0 0 20px;
     font-size: 20px;
     color: #ffffff;
 }
-
 .footer-year, .footer-github, .footer-rss {
     font-weight: 400;
     font-size: 20px;
     line-height: 50px;
     color: #ffffff;
 }
-
 .footer-year {
     padding: 49px 0 0 20px;
 }
-
 .footer-github {
     padding: 49px 0 0 20px;
     transition: 1s;
 }
-
 .footer-github:hover {
     color: #bdae82;
 }
-
 .footer-rss {
-    padding: 49px 0 0 427px;
+    padding: 49px 0 0 15px;
     transition: 1s;
 }
-
 .footer-rss:hover {
     color: #bdae82;
 }
-
+.footer-social {
+    width: 188px;
+    margin-right: 17px;
+}
 .list-social-net {
     display: flex;
     list-style-type: none;
 }
-
 .footer-inst {
-    padding: 60px 0 0 410px
+    padding: 60px 0 0 0px
 }
-
 .footer-fb {
     padding: 60px 0 0 30px;
 }
-
 .footer-twitter {
     padding: 62px 0 0 30px;
 }
-
 .footer-pin {
     padding: 59px 0 0 24px;
 }
-
 .footer-inst:hover, .footer-fb:hover, .footer-twitter:hover, .footer-pin:hover {
     filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
@@ -743,32 +724,117 @@ h1, h2, h3 {
     .video-player {
         background-image: url(./assets/img/video-player-tablet.jpg);
         background-repeat: no-repeat;
-        position: relative; 
         height: 418px;
         margin-top: 55px;
     } 
     .video-btn {
-        background-color: transparent;
-        border: 0;
-        position: absolute;
         width: 64.62px;
         height: 64.69px;
         left: 350.01px;
         top: 176.79px;
-        cursor: pointer;
-        transition: 0.5s;
     }
     .video-btn-img {
         max-width: 100%;
     }
-    .video-btn:hover {
-            filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
-            contrast(87%);
-    }
 /* SECTION PRICE */
-
-
-    
-
-   
+    .section-price {
+        padding-top: 80px;
+        height: 1905px;
+    }
+    .line-price {
+        height: 55%;
+        width: 121px;
+    }
+    .title-section-price {
+        font-size: 32px;
+        line-height: 80px;
+        padding-top: 4px;
+    }
+    .price-items {
+        justify-content: center;
+        margin-top: 55px;
+    }
+    .price-item {
+        width: 420px;
+        height: 505px;
+        flex-grow: 0;
+        margin-top: 23px;
+    }
+    .price-item:first-child {
+        margin-top: 0;
+    }
+/* SECTION CONTACTS */
+    .section-contacts {
+        justify-content: center;
+        background: url(./assets/img/contacts-tablet.jpg);
+        background-size: auto auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+        max-width: 100%;
+        height: 600px;
+        margin-top: 3px;
+    }
+    .contacts-container {
+        margin: 60px 0 0 0 ;
+    }
+    .contacts-title {
+        font-size: 32px;
+        line-height: 64px;
+        padding-left: 135px;
+    }
+    .button-contacts {
+        margin: 30px 0 0 115px;
+    }
+/* SECTION FOOTER */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 190px;
+        width: 768px;
+    }
+    .footer-year-github {
+        display: flex;
+        height: auto;
+        height: 65px;
+    }
+    .footer-year, .footer-github, .footer-rss {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 50px;
+    }
+    .footer-dev-sign {
+        padding: 29px 0 0 0;
+        font-size: 20px;
+    }
+    .footer-year {
+        padding: 15px 0 0 20px;
+    }
+    .footer-github {
+        padding: 15px 0 0 20px;
+        transition: 1s;
+    }
+    .footer-rss {
+        line-height: 24.2px;
+        padding: 0px 0px 15px 0px;
+        transition: 1s;
+        height: 50px;
+    }
+    .footer-social {
+        margin-right: 0px;
+        padding-top:10px;
+    }
+    .footer-inst {
+        padding: 0 0 0 0px
+    }
+    .footer-fb {
+        padding: 0 0 0 30px;
+    }
+    .footer-twitter {
+        padding: 0 0 0 30px;
+    }
+    .footer-pin {
+        padding: 0 0 0 24px;
+    }
 }
