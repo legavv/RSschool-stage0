@@ -189,7 +189,6 @@ li {
     flex-direction: column;
     align-items: center;
     padding-top: 100px;
-    height: 482px;
 }
 .section-title {
     display: flex;
@@ -214,22 +213,19 @@ li {
 }
 .skills-items {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-    height: 242px;
     margin-top: 60px;
+    row-gap: 30px;
+    column-gap: 40px;
 }
 .skill-item {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-between;
     width: 320px;
-    height: 242px;
-    margin-left: 40px;
+    /* height: 242px; */
     align-items: center;
-}
-.skill-item:first-child {
-    margin-left: 0px;
 }
 .skill-img {
     height: 50px;
@@ -240,15 +236,13 @@ li {
     font-size: 20px;
     line-height: 30px;
     color: #ffffff;
-    height: 40px;
-    margin-top: 50px;
+    margin-top: 55px;
   }
 .skill-text {
     font-weight: 400;
     font-size: 18px;
     line-height: 36px;
-    height: 90px;
-    padding-top: 8px;
+    padding-top: 25px;
     color: #ffffff;
     text-align: center;
 }
@@ -257,8 +251,7 @@ li {
 /* SECTION PORTFOLIO */
 
 .section-portfolio {
-    height: 1500px;
-    padding-top: 100px;
+    padding-top: 110px;
 }
 .line-portfolio-left {
     height: 50%;
@@ -281,8 +274,7 @@ li {
 .portfolio-btns {
     display: flex;
     flex-wrap: wrap;
-    width: 895px;
-    height: 55px;
+    width: 63.9%;
     margin: 60px auto 0 auto;
     gap: 5px;
     
@@ -291,7 +283,7 @@ li {
     display: inline-block;
     text-decoration: none;
     background-color: transparent;
-    width: 220px;
+    flex: 1;
     height: 55px;
     text-align: center;
     cursor: pointer;
@@ -310,24 +302,38 @@ li {
     color: #000000;
     transition: 1s;
 }
-.btngold {
+.button-gold-portfolio {
+    display: inline-block;
+    text-decoration: none;
     background-color: #bdae82;
-    color: #000000;
+    width: 24.56%;
+    height: 55px;
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 20px;
+    color:#000000;
+}
+.button-gold-portfolio:hover {
+    color: #ffffff;
 }
 .portfolio-items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 60px;
     row-gap: 20px;
+    column-gap: 25px;
 }
 
 
 /* SECTION VIDEO */
 
 .section-video {
-    padding-top: 100px;
-    height: 945px;
+    padding-top: 97px;
+    /* height: 945px; */
 }
 .line-video {
     height: 50%;
@@ -346,6 +352,7 @@ li {
     height: 705px;
     background-image: url(./assets/img/video-player.jpg);
     background-repeat: no-repeat;
+    background-position: center center;
     margin-top: 60px;
 }
 .video-btn {
@@ -354,7 +361,7 @@ li {
     position: absolute;
     width: 129.86px;
     height: 130px;
-    left: 636px;
+    left:45.3%;
     top: 288px;
     cursor: pointer;
     transition: 0.5s;
@@ -369,7 +376,6 @@ li {
 
 .section-price {
     padding-top: 100px;
-    height: 845px;
 }
 .line-price {
     height: 50%;
@@ -386,7 +392,6 @@ li {
 .price-items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     margin-top: 60px;
     gap: 26px;
 }
@@ -453,14 +458,13 @@ li {
     background-size: auto 700px;
     background-repeat: no-repeat;
     background-position: center center;
+    margin: 100px auto 0 auto;
     height: 700px;
-    width: 1440px;
-    margin: 0 auto;
 }
 .contacts-container {
     display: flex;
     flex-direction: column;
-    margin: 60px 20px 0 0 ;
+    margin: 60px 53px 0 0 ;
     width: 450px;
 }
 .contacts-title {
@@ -475,7 +479,7 @@ li {
     border: 2px solid #bdae82;
     font-family: inherit;
     font-size: 20px;
-    font-weight:4500;
+    font-weight:400;
     color: #bdae82;
     padding-left: 18px;
     background: rgba(0, 0, 0, 0.5);
@@ -534,11 +538,10 @@ li {
 .footer {
     display: flex;
     justify-content: space-between;
-    height: 150px;
-    width: 1440px;
     margin: 0 auto;
 }
 .footer-year-github {
+    margin: 2px 0 0 33px;
     display: flex;
 }
 .footer-dev-sign {
@@ -563,7 +566,7 @@ li {
     color: #bdae82;
 }
 .footer-rss {
-    padding: 49px 0 0 15px;
+    padding: 50px 0px 0 14px;
     transition: 1s;
 }
 .footer-rss:hover {
@@ -571,7 +574,7 @@ li {
 }
 .footer-social {
     width: 188px;
-    margin-right: 17px;
+    margin: 3px 50px 0 0;
 }
 .list-social-net {
     display: flex;
@@ -594,13 +597,14 @@ li {
     transition: 1s;
 }
 
-@media (max-width:1440px) {
+@media (max-width:890px) {
     .container {
         max-width: 768px;
         padding: 0px;
     }
     .header,.bg {
         background-image: url("./assets/img/bg_tablet.jpg");
+        background-repeat: no-repeat;
         padding: 0 60px;
         position: relative;
     }
@@ -610,7 +614,7 @@ li {
         justify-content: space-between;
         width: 50px;
         height: 28px;
-        margin: 32px 3px;
+        margin: 32px 8px 0 0px;
         cursor: pointer;
     }
     .burger.active .burger-line:nth-child(1) {
@@ -623,7 +627,7 @@ li {
         transform: rotate(45deg) translateY(-16px);
     }
     .burger.active {
-        position: absolute;
+        position: fixed;
         left: 642px;
         z-index: 150;
     }
@@ -631,22 +635,20 @@ li {
         height: 4px;
         background: #ffffff;
     }
-    .burger-line:hover {
+    .burger:hover .burger-line {
         background: #bdae82;
     }
     .nav-list {
         display: none;
         flex-direction: column;
         background-color: #000000;
-        width: 620px;
+        width: 689px;
         height: 1024px;
         position: absolute;
         z-index: 100;
         top: -20px;
         right: -190px;
         background: #000000;
-        width: 620px;
-        height: 1024px;
         line-height: 72.55px;
         padding-top: 137px;
         font-size:35px;
@@ -663,10 +665,10 @@ li {
         height: 73px;
     }
     .switch-lng {
-        margin: 23px 30px;
+        margin: 20px 28px 0 0;
     }
     .ru {
-        margin-left: 20px;
+        margin-left: 19px;
     }
 /* SECTION HERO     */
     .bg {
@@ -696,15 +698,13 @@ li {
     }
 /* SECTION SKILLS */
     .section-skills {
-        height: 725px;
-        padding: 83px 60px 0 60px;
+        padding-top: 85px;
     }
     .section-title {
         width: 364px;
     }
     .line-section {
         width: 116px;
-        height: 67%;
     }
     .title-section {
         font-size: 32px;
@@ -713,35 +713,28 @@ li {
         padding-top: 17px;
     }
     .skills-items {
-        height: 729px;
-        margin-top: 63px;
+        justify-content: center;
+        margin-top: 44px;
+        column-gap: 45px; 
     }
     .skill-item {
         width: 300px;
-        height: 224px;
-        margin-left: 40px;
-        align-items: center;
-        padding-right: 4px;
-    }
-    .skill-item:nth-child(odd) {
-        margin-left: 0px;
-        padding-left: 4px;
+        height: 228px;
     }
     .skill-title {
         font-weight: 700;
         font-size: 20px;
         line-height: 40px;
         margin-top: 0px;
-        padding-top: 10px;
+        padding: 29px 7px 0 0;
       }
     .skill-text {
         line-height: 21.78px;
-        padding-top: 8px;
+        padding: 20px 6px 0px 0;
     }
 /* SECTION PORTFOLIO */
     .section-portfolio {
-        height: 3870px;
-        padding-top: 80px;
+        margin-top: 4px;
     }
     .line-portfolio-left, .line-portfolio-right{
         height: 55%;
@@ -755,7 +748,15 @@ li {
     .portfolio-btns {
         width: 445px;
         height: 115px;
-        margin: 55px auto 0 auto;
+        margin: 53px auto 0 auto;
+    }
+    .button-transp {
+        flex: auto;
+        width: 220px;
+    }
+    .button-gold-portfolio {
+        flex: auto;
+        width: 220px;
     }
     .portfolio-items {
         display: flex;
@@ -769,8 +770,7 @@ li {
     }
 /* SECTION VIDEO */
     .section-video {
-        padding-top: 80px;
-        height: 628px;
+        padding-top: 71px;
     }
     .line-video {
         height: 55%;
@@ -785,12 +785,12 @@ li {
         background-image: url(./assets/img/video-player-tablet.jpg);
         background-repeat: no-repeat;
         height: 418px;
-        margin-top: 55px;
+        margin-top: 53px;
     } 
     .video-btn {
         width: 64.62px;
         height: 64.69px;
-        left: 350.01px;
+        left: 45.5%;
         top: 176.79px;
     }
     .video-btn-img {
@@ -798,8 +798,7 @@ li {
     }
 /* SECTION PRICE */
     .section-price {
-        padding-top: 80px;
-        height: 1905px;
+        padding-top: 76px;
     }
     .line-price {
         height: 55%;
@@ -827,15 +826,14 @@ li {
     .section-contacts {
         justify-content: center;
         background: url(./assets/img/contacts-tablet.jpg);
-        background-size: auto auto;
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: center;
         max-width: 100%;
+        margin-top: 81px;
         height: 600px;
-        margin-top: 3px;
     }
     .contacts-container {
-        margin: 60px 0 0 0 ;
+        margin: 61px 0 0 0 ;
     }
     .contacts-title {
         font-size: 32px;
@@ -851,13 +849,11 @@ li {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        height: 190px;
-        width: 768px;
     }
     .footer-year-github {
         display: flex;
         height: auto;
-        height: 65px;
+        margin: 2px 1px 0 0px;
     }
     .footer-year, .footer-github, .footer-rss {
         font-weight: 400;
@@ -869,7 +865,7 @@ li {
         font-size: 20px;
     }
     .footer-year {
-        padding: 15px 0 0 20px;
+        padding: 13px 1px 0 20px;
     }
     .footer-github {
         padding: 15px 0 0 20px;
@@ -877,13 +873,13 @@ li {
     }
     .footer-rss {
         line-height: 24.2px;
-        padding: 0px 0px 15px 0px;
+        padding: 3px 3px 0px 0px;
         transition: 1s;
         height: 50px;
     }
     .footer-social {
-        margin-right: 0px;
-        padding-top:10px;
+        margin-right: -2px;
+        margin-top: 9px;
     }
     .footer-inst {
         padding: 0 0 0 0px
