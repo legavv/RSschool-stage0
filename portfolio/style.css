@@ -628,7 +628,7 @@ li {
     }
     .burger.active {
         position: fixed;
-        left: 642px;
+        left: 684px;
         z-index: 150;
     }
     .burger-line {
@@ -642,12 +642,12 @@ li {
         display: none;
         flex-direction: column;
         background-color: #000000;
-        width: 689px;
+        width: 620px;
         height: 1024px;
         position: absolute;
         z-index: 100;
         top: -20px;
-        right: -190px;
+        right: -158px;
         background: #000000;
         line-height: 72.55px;
         padding-top: 137px;
