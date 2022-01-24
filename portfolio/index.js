@@ -2,8 +2,16 @@
 console.log();
 const burger = document.querySelector('.burger');
 const navList = document.querySelector('.nav-list'); 
-const burgerLine = document.querySelectorAll('.burger-line');
+const navLinks = document.querySelectorAll('.nav-link')
 burger.addEventListener('click', () => {
     navList.classList.toggle('active');
     burger.classList.toggle('active');
 });
+
+
+navLinks.forEach((el) => el.addEventListener('click', () => {
+    navList.classList.remove('active');
+    burger.classList.remove('active');
+}));
+
+
