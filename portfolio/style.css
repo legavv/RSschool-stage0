@@ -279,7 +279,7 @@ li {
     gap: 5px;
     
 }
-.button-transp {
+.button-portfolio {
     display: inline-block;
     text-decoration: none;
     background-color: transparent;
@@ -293,11 +293,11 @@ li {
     font-size: 20px;
     color:#bdae82;
 }
-.button-transp:hover {
+.button-portfolio:hover {
     transition: 1s;
     color: #ffffff;
 }
-.button-transp:focus {
+.button-portfolio:focus {
     background: #bdae82;
     color: #000000;
     transition: 1s;
