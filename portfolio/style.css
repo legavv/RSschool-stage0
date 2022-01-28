@@ -627,10 +627,10 @@ li {
         transform: rotate(45deg) translateY(-16px);
     }
     .burger.active {
-        position: fixed;
-        left: 684px;
+        position: absolute;
+        top: 0px;
+        left: 84%;
         z-index: 350;
-        /* width: 50px; */
     }
     .burger-line {
         height: 4px;
@@ -659,7 +659,7 @@ li {
     }
     .nav-item {
         height: 89px;
-        width: 60%;
+        width: 63%;
         margin-left: 0;
         padding-left: 0;
     }
