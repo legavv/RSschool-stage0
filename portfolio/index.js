@@ -31,23 +31,38 @@ function closeMenu(event) {
   
 //SECTION PORTFOLIO
 const portfolioBtns = document.querySelector('.portfolio-btns');
+const buttonsPortfolio = document.querySelectorAll('.button-portfolio')
 const portfolioImgs = document.querySelectorAll('.portfolio-img');
-
+const seasons = ['winter', 'spring', 'summer', 'autumn'];
 
 portfolioBtns.addEventListener('click', changeImage);
 portfolioBtns.addEventListener('click', changeClassActive)
+preloadImages();
 
 function changeImage(event) { 
     if (event.target.classList.contains('button-portfolio')) {
-        console.log(event.target.classList)
         portfolioImgs.forEach((img, index) => img.src = `./assets/img/${event.target.dataset.season}/${index + 1}.jpg`)
     }
 }
 
-function changeClassActive() {
-    
+function preloadImages() {
+    seasons.forEach((seasonName) => {
+        for(let i = 1; i <= 6; i++) {
+            const img = new Image();
+            img.src = `./assets/img/${seasonName}/${i}.jpg`;
+        }
+    })
 }
+
+function changeClassActive(event) {
+    if (event.target.classList.contains('button-portfolio')) {
+        buttonsPortfolio.forEach((button) => button.classList.remove('active'));
+        event.target.classList.add('active');
+    }
+}
+
+
 // function getTranslate (lenguager) {
     // document.querySelectorAll('[data-i18]').forEach((item) => { })
 // }
-// 
+// console.log(event.target.classList)

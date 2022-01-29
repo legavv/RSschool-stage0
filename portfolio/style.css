@@ -297,12 +297,12 @@ li {
     transition: 1s;
     color: #ffffff;
 }
-.button-portfolio:focus {
+.button-portfolio.active {
     background: #bdae82;
     color: #000000;
     transition: 1s;
 }
-/* active */
+/* :focus */
 .button-gold-portfolio {
     display: inline-block;
     text-decoration: none;
