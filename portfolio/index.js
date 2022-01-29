@@ -31,12 +31,14 @@ function closeMenu(event) {
   
 //SECTION PORTFOLIO
 const portfolioBtns = document.querySelector('.portfolio-btns');
-const buttonsPortfolio = document.querySelectorAll('.button-portfolio')
 const portfolioImgs = document.querySelectorAll('.portfolio-img');
+const lng = document.querySelector('.lng');
 const seasons = ['winter', 'spring', 'summer', 'autumn'];
 
 portfolioBtns.addEventListener('click', changeImage);
 portfolioBtns.addEventListener('click', changeClassActive)
+lng.addEventListener('click', changeClassActive)
+
 preloadImages();
 
 function changeImage(event) { 
@@ -55,12 +57,10 @@ function preloadImages() {
 }
 
 function changeClassActive(event) {
-    if (event.target.classList.contains('button-portfolio')) {
-        buttonsPortfolio.forEach((button) => button.classList.remove('active'));
+        const allButton = document.querySelectorAll(`.${event.target.classList[0]}`);
+        allButton.forEach((button) => button.classList.remove('active'));
         event.target.classList.add('active');
-    }
 }
-
 
 // function getTranslate (lenguager) {
     // document.querySelectorAll('[data-i18]').forEach((item) => { })

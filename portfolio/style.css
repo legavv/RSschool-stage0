@@ -100,23 +100,24 @@ li {
 .nav-link:hover {
     color: #bdae82;
 }
-.switch-lng {
+.lng {
     display: flex;
     font-weight: 700;
     font-size: 20px;
     width: 70px;
     height: 50px;
     align-items: center;
+    margin-top: 19px;
 }
-.en {
+.lng-link, .slash {
+    color: #ffffff;
+    margin-left: 1px;
+    width: 25px;
+    text-align: center;
+}
+.lng-link.active {
     color: #bdae82;
-    margin-right: 10px;
-}
-.ru {
-    margin-left: 8px;
-}
-.ru:hover {
-    color: #bdae82;
+    background: transparent;
 }
 
 
@@ -297,12 +298,11 @@ li {
     transition: 1s;
     color: #ffffff;
 }
-.button-portfolio.active {
+.active {
     background: #bdae82;
     color: #000000;
     transition: 1s;
 }
-/* :focus */
 .button-gold-portfolio {
     display: inline-block;
     text-decoration: none;
