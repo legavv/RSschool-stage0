@@ -1,3 +1,5 @@
+import i18Obj from './translate.js';
+
 // console.log ("Вёрстка валидная +10 \nВёрстка семантическая +20 \nВёрстка соответствует макету +48 \nТребования к css +12 \nИнтерактивность, реализуемая через css +20 \nИТОГО: +110");
 console.log();
 
@@ -18,6 +20,7 @@ burger.addEventListener('click', () => {
 // }));
 
 navList.addEventListener('click', closeMenu);
+
 function closeMenu(event) {
     if (event.target.classList.contains('nav-link')) {
         navList.classList.remove('active');
@@ -30,9 +33,21 @@ function closeMenu(event) {
 const portfolioBtns = document.querySelector('.portfolio-btns');
 const portfolioImgs = document.querySelectorAll('.portfolio-img');
 
+
 portfolioBtns.addEventListener('click', changeImage);
+portfolioBtns.addEventListener('click', changeClassActive)
+
 function changeImage(event) { 
     if (event.target.classList.contains('button-portfolio')) {
+        console.log(event.target.classList)
         portfolioImgs.forEach((img, index) => img.src = `./assets/img/${event.target.dataset.season}/${index + 1}.jpg`)
     }
 }
+
+function changeClassActive() {
+    
+}
+// function getTranslate (lenguager) {
+    // document.querySelectorAll('[data-i18]').forEach((item) => { })
+// }
+// 

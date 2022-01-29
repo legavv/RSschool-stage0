@@ -302,6 +302,7 @@ li {
     color: #000000;
     transition: 1s;
 }
+/* active */
 .button-gold-portfolio {
     display: inline-block;
     text-decoration: none;
