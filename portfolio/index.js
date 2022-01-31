@@ -34,7 +34,7 @@ const portfolioImgs = document.querySelectorAll('.portfolio-img');
 const lng = document.querySelector('.lng');
 const seasons = ['winter', 'spring', 'summer', 'autumn'];
 const otherTheme = document.querySelector('.other-theme');
-const listDarkClasses = ['section-skills', 'section-portfolio', 'section-video', 'section-price', 'line-section','title-section'];
+const listDarkClasses = ['body', 'section-skills', 'section-portfolio', 'section-video', 'section-price', 'line-section','title-section', 'button-portfolio', 'footer'];
 
 portfolioBtns.addEventListener('click', (event) => {
     if(event.target.classList.contains('button-portfolio')) {
@@ -51,7 +51,6 @@ lng.addEventListener('click', (event) => {
 })
 
 otherTheme.addEventListener('click', (event) => {
-    console.log(otherTheme)
     otherTheme.classList.toggle('light');
     changeTheme(listDarkClasses);
 });
@@ -95,7 +94,9 @@ function getTranslate (language) {
 
 function changeTheme (elements) {
     elements.forEach((currentElement) => {
-        document.querySelector(`.${currentElement}`).classList.toggle('light-theme');
+        document.querySelectorAll(`.${currentElement}`).forEach((currentElement)=>{
+            currentElement.classList.toggle('light-theme');
+        });
     });
 }
 
