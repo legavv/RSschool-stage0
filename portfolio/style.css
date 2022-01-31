@@ -9,6 +9,7 @@ html {
 body {
     font-family: "Inter", sans-serif;
     background: #000000;
+    color: #ffffff;
     overflow-x: hidden;
 }
 a {
@@ -27,6 +28,10 @@ li {
     padding: 0 20px;
     margin: 0 auto;
 }
+
+.light-theme {
+    background-color: #fff;
+  }
 
 
 /* HEADER */
@@ -68,7 +73,7 @@ li {
     display: flex;
     width: 500px;
     height: 50px;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
 }
 .burger {
@@ -94,29 +99,51 @@ li {
     width: 86px;
 }
 .nav-link, .switch-lng-link {
-    color: #ffffff;
     transition: 1s;
   }
 .nav-link:hover {
     color: #bdae82;
 }
-.switch-lng {
+.lng {
     display: flex;
     font-weight: 700;
     font-size: 20px;
     width: 70px;
     height: 50px;
     align-items: center;
+    margin: 19px 0 0 20px;
+    transition: 1s;
 }
-.en {
+.lng-link, .slash {
+    margin-left: 1px;
+    width: 25px;
+    text-align: center;
+}
+.lng-link.active {
     color: #bdae82;
-    margin-right: 10px;
+    background: transparent;
 }
-.ru {
-    margin-left: 8px;
-}
-.ru:hover {
+.lng-link:hover {
+    transition: 1s;
     color: #bdae82;
+}
+.other-theme {
+    width: 45px;
+    height: 45px;
+    margin: 25px 0 0 35px;
+    background-image: url("./assets/svg/carbon_sun.svg");
+    background-repeat: no-repeat;
+    background-position: center 0;
+    transition: 0.7s;
+    cursor: pointer;
+}
+.other-theme.light {
+    background-image: url("./assets/svg/moon.svg");
+    width: 40px;
+    height: 40px;
+}
+.other-theme:hover, .other-theme.light:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
 }
 
 
@@ -133,7 +160,6 @@ li {
     font-weight: 400;
     font-size: 20px;
     line-height: 40px;
-    color: #ffffff;
     width: 500px;
     height: 330px;
     margin-left: 60px;  
@@ -190,30 +216,40 @@ li {
     align-items: center;
     padding-top: 100px;
 }
+.section-skills.light-theme {
+    color: #000000;
+}
 .section-title {
     display: flex;
     justify-content: space-between;
-    width: 700px;
+    width: 50%;
     height: 80px;
     margin: 0 auto;
 }
 .line-section {
     height: 50%;
     border-bottom: 2px solid #bdae82;
-    width: 274px;
+    /* width: 274px; */
+    width: 75%;
+}
+.line-section.light-theme {
+    border-bottom: 2px solid #000000;
 }
 .title-section {
     font-family: 'Merriweather', serif;
     font-weight: 700;
     font-size: 40px;
     color: #bdae82;
-    width: 152px;
+    width: 280px;
     text-align: center;
     padding-top: 15px;
 }
+.title-section.light-theme {
+    color: #000000;
+}
 .skills-items {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin-top: 60px;
     row-gap: 30px;
@@ -223,7 +259,7 @@ li {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 320px;
+    width: 21%;
     /* height: 242px; */
     align-items: center;
 }
@@ -235,7 +271,6 @@ li {
     font-weight: 700;
     font-size: 20px;
     line-height: 30px;
-    color: #ffffff;
     margin-top: 55px;
   }
 .skill-text {
@@ -243,7 +278,6 @@ li {
     font-size: 18px;
     line-height: 36px;
     padding-top: 25px;
-    color: #ffffff;
     text-align: center;
 }
 
@@ -279,7 +313,7 @@ li {
     gap: 5px;
     
 }
-.button-transp {
+.button-portfolio {
     display: inline-block;
     text-decoration: none;
     background-color: transparent;
@@ -292,15 +326,24 @@ li {
     font-weight: 400;
     font-size: 20px;
     color:#bdae82;
-}
-.button-transp:hover {
     transition: 1s;
+}
+.button-portfolio:hover {
     color: #ffffff;
 }
-.button-transp:focus {
+.button-portfolio.active {
     background: #bdae82;
     color: #000000;
     transition: 1s;
+}
+.button-portfolio.light-theme {
+    color: #000000;
+}
+.button-portfolio.light-theme:hover {
+    color: #bdae82;
+}
+.button-portfolio.active.light-theme {
+    color: #ffffff;
 }
 .button-gold-portfolio {
     display: inline-block;
@@ -377,6 +420,9 @@ li {
 .section-price {
     padding-top: 100px;
 }
+.section-price.light-theme {
+    color: #000000;
+}
 .line-price {
     height: 50%;
     border-bottom: 2px solid #bdae82;
@@ -408,7 +454,6 @@ li {
     font-size: 28px;
     line-height: 56px;
     margin: 40px auto 0 auto;
-    color: #ffffff;
 }
 .price-quantity {
     font-family: 'Merriweather', serif;
@@ -423,7 +468,6 @@ li {
     font-weight: 400;
     font-size: 18px;
     line-height: 36px;
-    color: #ffffff;
     text-align: center;
     margin: 0 auto;
 }
@@ -547,13 +591,11 @@ li {
 .footer-dev-sign {
     padding: 62px 0 0 20px;
     font-size: 20px;
-    color: #ffffff;
 }
 .footer-year, .footer-github, .footer-rss {
     font-weight: 400;
     font-size: 20px;
     line-height: 50px;
-    color: #ffffff;
 }
 .footer-year {
     padding: 49px 0 0 20px;
@@ -595,6 +637,11 @@ li {
     filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
     transition: 1s;
+}
+.footer.light-theme {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #000000;
 }
 
 @media (max-width:890px) {
