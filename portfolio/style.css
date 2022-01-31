@@ -108,6 +108,7 @@ li {
     height: 50px;
     align-items: center;
     margin-top: 19px;
+    transition: 1s;
 }
 .lng-link, .slash {
     color: #ffffff;
@@ -293,9 +294,9 @@ li {
     font-weight: 400;
     font-size: 20px;
     color:#bdae82;
+    transition: 1s;
 }
 .button-portfolio:hover {
-    transition: 1s;
     color: #ffffff;
 }
 .active {

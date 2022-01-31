@@ -35,9 +35,21 @@ const portfolioImgs = document.querySelectorAll('.portfolio-img');
 const lng = document.querySelector('.lng');
 const seasons = ['winter', 'spring', 'summer', 'autumn'];
 
-portfolioBtns.addEventListener('click', changeImage);
-portfolioBtns.addEventListener('click', changeClassActive)
-lng.addEventListener('click', changeClassActive)
+// portfolioBtns.addEventListener('click', changeImage);
+// portfolioBtns.addEventListener('click', changeClassActive)
+portfolioBtns.addEventListener('click', (event) => {
+    if(event.target.classList.contains('button-portfolio')) {
+        changeImage(event);
+        changeClassActive(event);
+    }
+});
+
+lng.addEventListener('click', (event) => {
+    changeClassActive(event)
+    if(event.target.classList.contains('lng-link')) {
+        getTranslate(event.target.dataset.lngkeyinobj);
+    }
+})
 
 preloadImages();
 
@@ -62,7 +74,17 @@ function changeClassActive(event) {
         event.target.classList.add('active');
 }
 
-// function getTranslate (lenguager) {
-    // document.querySelectorAll('[data-i18]').forEach((item) => { })
-// }
-// console.log(event.target.classList)
+// файл с переводом. Внутри него объект, внутри которого ещё два объекта с ключами "en" и "ru",
+//  внутри каждого из них список свойств в формате ключ-значение, где ключ - это значение
+//   data-атрибута элемента, а значение - текст, который внутри этого элемента находится.- i18Obj[language][item.dataset.i18]
+// для каждого элемента указываем текстовое содержание - textContent - значение соответствующего 
+// этому элементу свойства объекта i18Obj
+// Подсказка. Язык перевода это аргумент, с которым вызывается функция getTranslate(). Ключ по которому
+// получаем значение - dataset.i18
+
+function getTranslate (language) {
+    document.querySelectorAll('[data-i18]').forEach(
+        (currentElement) => currentElement.textContent = i18Obj[language][currentElement.dataset.i18]
+        )
+ 
+}
