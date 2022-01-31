@@ -73,7 +73,7 @@ li {
     display: flex;
     width: 500px;
     height: 50px;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
 }
 .burger {
@@ -111,7 +111,7 @@ li {
     width: 70px;
     height: 50px;
     align-items: center;
-    margin-top: 19px;
+    margin: 19px 0 0 20px;
     transition: 1s;
 }
 .lng-link, .slash {
@@ -141,6 +141,9 @@ li {
     background-image: url("./assets/svg/moon.svg");
     width: 40px;
     height: 40px;
+}
+.other-theme:hover, .other-theme.light:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
 }
 
 
@@ -219,7 +222,7 @@ li {
 .section-title {
     display: flex;
     justify-content: space-between;
-    width: 700px;
+    width: 50%;
     height: 80px;
     margin: 0 auto;
 }
@@ -227,7 +230,7 @@ li {
     height: 50%;
     border-bottom: 2px solid #bdae82;
     /* width: 274px; */
-    width: 250px;
+    width: 75%;
 }
 .line-section.light-theme {
     border-bottom: 2px solid #000000;
@@ -237,7 +240,7 @@ li {
     font-weight: 700;
     font-size: 40px;
     color: #bdae82;
-    width: 182px;
+    width: 280px;
     text-align: center;
     padding-top: 15px;
 }
@@ -246,7 +249,7 @@ li {
 }
 .skills-items {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin-top: 60px;
     row-gap: 30px;
@@ -256,7 +259,7 @@ li {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 320px;
+    width: 21%;
     /* height: 242px; */
     align-items: center;
 }
@@ -636,8 +639,7 @@ li {
     transition: 1s;
 }
 .footer.light-theme {
-    width: 94.8%;
-    padding: 0 20px;
+    max-width: 1440px;
     margin: 0 auto;
     background-color: #000000;
 }
