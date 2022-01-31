@@ -1,7 +1,6 @@
 import i18Obj from './translate.js';
 
 // console.log ("Вёрстка валидная +10 \nВёрстка семантическая +20 \nВёрстка соответствует макету +48 \nТребования к css +12 \nИнтерактивность, реализуемая через css +20 \nИТОГО: +110");
-console.log();
 
 
 //MENU BURGER
@@ -34,9 +33,9 @@ const portfolioBtns = document.querySelector('.portfolio-btns');
 const portfolioImgs = document.querySelectorAll('.portfolio-img');
 const lng = document.querySelector('.lng');
 const seasons = ['winter', 'spring', 'summer', 'autumn'];
+const otherTheme = document.querySelector('.other-theme');
+const listDarkClasses = ['section-skills', 'section-portfolio', 'section-video', 'section-price', 'line-section','title-section'];
 
-// portfolioBtns.addEventListener('click', changeImage);
-// portfolioBtns.addEventListener('click', changeClassActive)
 portfolioBtns.addEventListener('click', (event) => {
     if(event.target.classList.contains('button-portfolio')) {
         changeImage(event);
@@ -50,6 +49,12 @@ lng.addEventListener('click', (event) => {
         getTranslate(event.target.dataset.lngkeyinobj);
     }
 })
+
+otherTheme.addEventListener('click', (event) => {
+    console.log(otherTheme)
+    otherTheme.classList.toggle('light');
+    changeTheme(listDarkClasses);
+});
 
 preloadImages();
 
@@ -86,5 +91,15 @@ function getTranslate (language) {
     document.querySelectorAll('[data-i18]').forEach(
         (currentElement) => currentElement.textContent = i18Obj[language][currentElement.dataset.i18]
         )
- 
 }
+
+function changeTheme (elements) {
+    elements.forEach((currentElement) => {
+        document.querySelector(`.${currentElement}`).classList.toggle('light-theme');
+    });
+}
+
+// if (!currentElement.classList.contains('light-theme')){
+//     currentElement.classList.add('light-theme');
+// } else {
+//     currentElement.classList.remove('light-theme');

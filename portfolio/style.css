@@ -9,6 +9,7 @@ html {
 body {
     font-family: "Inter", sans-serif;
     background: #000000;
+    color: #ffffff;
     overflow-x: hidden;
 }
 a {
@@ -28,6 +29,14 @@ li {
     margin: 0 auto;
 }
 
+.light-theme {
+    background-color: #fff;
+    color: #000;
+  }
+  
+.light-theme:hover {
+    color: #000;
+ }
 
 /* HEADER */
 
@@ -94,7 +103,6 @@ li {
     width: 86px;
 }
 .nav-link, .switch-lng-link {
-    color: #ffffff;
     transition: 1s;
   }
 .nav-link:hover {
@@ -111,7 +119,6 @@ li {
     transition: 1s;
 }
 .lng-link, .slash {
-    color: #ffffff;
     margin-left: 1px;
     width: 25px;
     text-align: center;
@@ -119,6 +126,25 @@ li {
 .lng-link.active {
     color: #bdae82;
     background: transparent;
+}
+.lng-link:hover {
+    transition: 1s;
+    color: #bdae82;
+}
+.other-theme {
+    width: 45px;
+    height: 45px;
+    margin: 25px 0 0 35px;
+    background-image: url("./assets/svg/carbon_sun.svg");
+    background-repeat: no-repeat;
+    background-position: center 0;
+    transition: 0.7s;
+    cursor: pointer;
+}
+.other-theme.light {
+    background-image: url("./assets/svg/moon.svg");
+    width: 40px;
+    height: 40px;
 }
 
 
@@ -135,7 +161,6 @@ li {
     font-weight: 400;
     font-size: 20px;
     line-height: 40px;
-    color: #ffffff;
     width: 500px;
     height: 330px;
     margin-left: 60px;  
@@ -204,6 +229,9 @@ li {
     border-bottom: 2px solid #bdae82;
     width: 274px;
 }
+.line-section.light-theme {
+    border-bottom: 2px solid #000000;
+}
 .title-section {
     font-family: 'Merriweather', serif;
     font-weight: 700;
@@ -212,6 +240,9 @@ li {
     width: 152px;
     text-align: center;
     padding-top: 15px;
+}
+.title-section.light-theme {
+    color: #000000;
 }
 .skills-items {
     display: flex;
@@ -237,7 +268,6 @@ li {
     font-weight: 700;
     font-size: 20px;
     line-height: 30px;
-    color: #ffffff;
     margin-top: 55px;
   }
 .skill-text {
@@ -245,7 +275,6 @@ li {
     font-size: 18px;
     line-height: 36px;
     padding-top: 25px;
-    color: #ffffff;
     text-align: center;
 }
 
@@ -299,7 +328,7 @@ li {
 .button-portfolio:hover {
     color: #ffffff;
 }
-.active {
+.button-portfolio.active {
     background: #bdae82;
     color: #000000;
     transition: 1s;
@@ -410,7 +439,6 @@ li {
     font-size: 28px;
     line-height: 56px;
     margin: 40px auto 0 auto;
-    color: #ffffff;
 }
 .price-quantity {
     font-family: 'Merriweather', serif;
@@ -425,7 +453,6 @@ li {
     font-weight: 400;
     font-size: 18px;
     line-height: 36px;
-    color: #ffffff;
     text-align: center;
     margin: 0 auto;
 }
@@ -549,13 +576,11 @@ li {
 .footer-dev-sign {
     padding: 62px 0 0 20px;
     font-size: 20px;
-    color: #ffffff;
 }
 .footer-year, .footer-github, .footer-rss {
     font-weight: 400;
     font-size: 20px;
     line-height: 50px;
-    color: #ffffff;
 }
 .footer-year {
     padding: 49px 0 0 20px;
