@@ -1,0 +1,80 @@
+* [33m5556317[m[33m ([m[1;36mHEAD -> [m[1;32mcustom-video-part1[m[33m)[m refactor: change code move directories with media files into directory project
+* [33m9b4210f[m[33m ([m[1;31morigin/custom-video-part1[m[33m)[m fix: remove delay color progress in input after click and fix switch to any time play
+* [33m671bbe7[m feat: add mute in pause and refactor code
+* [33m23bf11f[m feat: play and hide video-btn afte click progress line in pause
+* [33m3577f2a[m feat: add html css savescrine range volume mute range progress play pause
+*   [33mff9f723[m[33m ([m[1;31morigin/portfolio[m[33m, [m[1;32mportfolio[m[33m)[m Merge pull request #11 from rolling-scopes-school/portfolio-part3
+[32m|[m[33m\[m  
+[32m|[m * [33m2aee51e[m[33m ([m[1;31morigin/portfolio-part3[m[33m, [m[1;32mportfolio-part3[m[33m)[m fix: link nav skills and portfolio
+[32m|[m * [33m6a8c391[m fix: try insert Local Storage, does't work
+[32m|[m [33m|[m *   [33m78ebd26[m[33m ([m[1;31morigin/gh-pages[m[33m)[m Merge pull request #10 from rolling-scopes-school/portfolio
+[32m|[m [33m|[m [34m|[m[32m\[m  
+[32m|[m [33m|[m[32m_[m[34m|[m[32m/[m  
+[32m|[m[32m/[m[33m|[m [34m|[m   
+* [33m|[m [34m|[m [33mf850ce4[m Merge pull request #9 from rolling-scopes-school/portfolio-part3
+[36m|[m[33m\[m[33m|[m [34m|[m 
+[36m|[m * [34m|[m [33m974b97e[m refactor: change css footer light theme
+[36m|[m * [34m|[m [33m9f97129[m feat: add light theme desktop
+[36m|[m * [34m|[m [33m9f21096[m feat: add change theme
+[36m|[m * [34m|[m [33m34a65e7[m feat: add change language
+[36m|[m * [34m|[m [33m2afe94e[m feat: add switch collor language
+[36m|[m * [34m|[m [33m8174262[m feat: add active button whith help js
+[36m|[m * [34m|[m [33m22d5b88[m feat: add data-attribute in index.html
+[36m|[m * [34m|[m [33m4f83c48[m feat: change img in section portfolio
+[36m|[m[36m/[m [34m/[m  
+[36m|[m *   [33m5df4fb9[m Merge pull request #8 from rolling-scopes-school/portfolio
+[36m|[m [1;32m|[m[36m\[m  
+[36m|[m [1;32m|[m[36m/[m  
+[36m|[m[36m/[m[1;32m|[m   
+* [1;32m|[m   [33m1f586b6[m Merge pull request #7 from rolling-scopes-school/portfolio-part2
+[1;34m|[m[1;35m\[m [1;32m\[m  
+[1;34m|[m * [1;32m|[m [33m86b3c71[m[33m ([m[1;31morigin/portfolio-part2[m[33m, [m[1;32mportfolio-part2[m[33m)[m feat: position cross in adaptive menu
+[1;34m|[m * [1;32m|[m [33mbaa8b81[m feat: change dimention adaptive menu
+[1;34m|[m [1;35m|[m *   [33mb12bd45[m Merge pull request #6 from rolling-scopes-school/portfolio
+[1;34m|[m [1;35m|[m [1;36m|[m[1;34m\[m  
+[1;34m|[m [1;35m|[m[1;34m_[m[1;36m|[m[1;34m/[m  
+[1;34m|[m[1;34m/[m[1;35m|[m [1;36m|[m   
+* [1;35m|[m [1;36m|[m [33m5cf0db7[m Merge pull request #5 from rolling-scopes-school/portfolio-part2
+[32m|[m[1;35m\[m[1;35m|[m [1;36m|[m 
+[32m|[m * [1;36m|[m [33m07f2e0b[m feat: overlap pixels in burger-menu
+[32m|[m * [1;36m|[m [33m884c81d[m feat: add clouse burger-menu after click link
+[32m|[m [33m|[m *   [33mcce36c6[m Merge pull request #4 from rolling-scopes-school/portfolio
+[32m|[m [33m|[m [34m|[m[32m\[m  
+[32m|[m [33m|[m[32m_[m[34m|[m[32m/[m  
+[32m|[m[32m/[m[33m|[m [34m|[m   
+* [33m|[m [34m|[m [33m969eb29[m Merge pull request #3 from rolling-scopes-school/portfolio-part2
+[36m|[m[33m\[m[33m|[m [34m|[m 
+[36m|[m * [34m|[m [33m77369a9[m refacrot: correct code after validator
+[36m|[m * [34m|[m [33m914945f[m feat: add adaptive in big and small size
+[36m|[m * [34m|[m [33mf230906[m feat: add burger menu
+[36m|[m * [34m|[m [33m5a8fdd4[m feat: finish layout 768px
+[36m|[m * [34m|[m [33m1ca51d6[m feat: add section header hero skills portfolio video in tablet layout
+[36m|[m * [34m|[m [33m5708776[m feat: remove width in section skills, portfolio, price
+[36m|[m[36m/[m [34m/[m  
+[36m|[m *   [33mcf25623[m[33m ([m[1;32mgh-pages[m[33m)[m Merge pull request #1 from rolling-scopes-school/portfolio
+[36m|[m [1;32m|[m[36m\[m  
+[36m|[m [1;32m|[m[36m/[m  
+[36m|[m[36m/[m[1;32m|[m   
+* [1;32m|[m [33mdd9168a[m feat: add grade to index.js
+* [1;32m|[m [33ma896b75[m refactor: change code for validator
+* [1;32m|[m [33mf735ecf[m refactor: add link hover and add ul
+* [1;32m|[m [33m8a30510[m feat: add section contacts and footer
+* [1;32m|[m [33mf3dd51d[m feat: add section price
+[1;33m|[m [1;32m|[m     
+[1;33m|[m  [1;32m\[m    
+*[1;36m-[m[1;36m.[m [1;32m\[m   [33m84267f6[m[33m ([m[1;35mrefs/stash[m[33m)[m On portfolio: feat: add section portfolio
+[1;34m|[m[1;35m\[m [1;36m\[m [1;32m\[m  
+[1;34m|[m [1;35m|[m * [1;32m|[m [33m3a0948d[m untracked files on portfolio: 4aca2a9 feat: add buttons in section portfolio
+[1;34m|[m [1;35m|[m  [1;32m/[m  
+[1;34m|[m * [1;32m/[m [33m78c1509[m index on portfolio: 4aca2a9 feat: add buttons in section portfolio
+[1;34m|[m[1;34m/[m [1;32m/[m  
+* [1;32m|[m [33m4aca2a9[m feat: add buttons in section portfolio
+* [1;32m|[m [33md2ab24b[m fix: finish section skills
+* [1;32m|[m [33m46de1d6[m fix: change ntn-child to div
+* [1;32m|[m [33me8dde26[m refactor: save after change button
+* [1;32m|[m [33m47b8869[m feat: make interactive logo in header
+* [1;32m|[m [33m31904ad[m feat: add section hero and title skills
+* [1;32m|[m [33ma224b33[m feat: make layout header
+* [1;32m|[m [33m02aa775[m init: start task portfolio1 add file index style script
+[1;32m|[m[1;32m/[m  
+* [33mf034ad7[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m Initial commit
