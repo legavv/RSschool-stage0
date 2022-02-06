@@ -58,6 +58,8 @@ playerViewer.addEventListener('timeupdate', () => {
 })
 playerProgress.addEventListener('click', (event) => {
     playerViewer.currentTime = playerProgress.value * playerViewer.duration / 100 ;
+    playerViewer.play();
+    videoBtn.style.display = 'none';
 });
 
 
