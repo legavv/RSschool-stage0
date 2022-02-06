@@ -45,6 +45,11 @@ muteButton.addEventListener('click', () => {
 playerVolume.addEventListener('input', () => {
     playerViewer.volume = playerVolume.value;
     playerVolume.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${playerVolume.value * 100}%, #c8c8c8 ${playerVolume.value * 100}%, #c8c8c8 100%`
+    if (playerViewer.volume === 0) {
+        muteButton.classList.add('active');
+    } else {
+        muteButton.classList.remove('active');
+    }
 });
 playerViewer.addEventListener('ended', () => {
     playerViewer.currentTime = 0;
@@ -52,13 +57,17 @@ playerViewer.addEventListener('ended', () => {
 playerViewer.addEventListener('timeupdate', () => {
     playPercent = Math.round((playerViewer.currentTime / playerViewer.duration) * 100);
     playerProgress.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${playPercent}%, #c8c8c8 ${playPercent}%, #c8c8c8 100%`
-    playerProgress.value = playPercent
+    playerProgress.value = playPercent;
 })
-playerProgress.addEventListener('click', (event) => {
+playerProgress.addEventListener('input', () => {
+    playerProgress.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${playerProgress.value}%, #c8c8c8 ${playerProgress.value}%, #c8c8c8 100%`
+    playerViewer.currentTime = playerProgress.value * playerViewer.duration / 100;
+});
+playerProgress.addEventListener('click', () => {
     playerViewer.currentTime = playerProgress.value * playerViewer.duration / 100 ;
     playerViewer.play();
     videoBtn.style.display = 'none';
 });
 
 
-console.log(playerProgress)
+
