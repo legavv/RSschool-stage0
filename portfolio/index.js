@@ -29,6 +29,8 @@ function closeMenu(event) {
 
   
 //SECTION PORTFOLIO
+let lang = 'en';
+let theme = 'dark';
 const portfolioBtns = document.querySelector('.portfolio-btns');
 const portfolioImgs = document.querySelectorAll('.portfolio-img');
 const lng = document.querySelector('.lng');
@@ -90,17 +92,44 @@ function getTranslate (language) {
     document.querySelectorAll('[data-i18]').forEach(
         (currentElement) => currentElement.textContent = i18Obj[language][currentElement.dataset.i18]
         )
+    language === 'en' ? lang = 'en' : lang = 'ru'; 
+    setLocalStorage();
 }
 
 function changeTheme (elements) {
     elements.forEach((currentElement) => {
         document.querySelectorAll(`.${currentElement}`).forEach((currentElement)=>{
             currentElement.classList.toggle('light-theme');
+            currentElement.classList.contains('light-theme') ? theme = 'light' : theme = 'dark'
+            setLocalStorage();
         });
     });
 }
 
-// if (!currentElement.classList.contains('light-theme')){
-//     currentElement.classList.add('light-theme');
-// } else {
-//     currentElement.classList.remove('light-theme');
+function setLocalStorage() {
+    localStorage.setItem('lang', lang);
+    localStorage.setItem('theme', theme);
+    console.log(lang)
+  }
+  window.addEventListener('beforeunload', setLocalStorage)
+
+// ЭТОТ КОД НЕ РАБОТАЕТ
+  function getLocalStorage() {
+    if(localStorage.getItem('lang')) {
+      const lang = localStorage.getItem('lang');
+      getTranslate(lang);
+    } else {
+        localStorage.setItem('lang', lang);
+    }
+
+    if(localStorage.getItem('theme')) {
+        const theme = localStorage.getItem('theme');
+        getTranslate(theme);
+    } else {
+        localStorage.setItem('theme', theme);
+    }
+  }
+  window.addEventListener('load', getLocalStorage)
+  
+
+
