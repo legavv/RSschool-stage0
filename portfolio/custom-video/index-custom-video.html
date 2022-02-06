@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style-custom-video.css">
+    <link rel="icon" href="../assets/img/favicon-camera3.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@700&display=swap"
+        rel="stylesheet">
+    <title>custom-video</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="section-title" id="video">
+            <div class="line-section"></div>
+            <div class="title-section">
+                <h2 class="h2">Video</h2>
+            </div>
+            <div class="line-section"></div>
+        </div>
+        
+        <div class="video-player">
+            <div class="splash-screen"></div>
+            <button class="video-btn">
+                <img class="video-btn-img" src="../assets/svg/Play_hover.svg" alt="video-btn">
+            </button>
+            <video class="player__viewer" src="../assets/video/video.mp4" preload="auto" ></video>        
+            <div class="player__controls">
+                <button class="player__button-play-pause" title="Toggle Play"></button>
+                <input class="player__progress" type="range" min="0" max="100" step="1" value="0">
+                <button class="player__button-mute"></button>
+                <input class="player__volume" type="range" min="0" max="1" step="0.01" value="0.20">
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer">
+                <div class="footer-year-github">
+                    <div class="footer-dev-sign">
+                        &COPY;
+                    </div>
+                    <div class="footer-year">
+                        2022
+                    </div>
+                    <div class="footer-github">
+                        <a href="https://github.com/legavv" target="_blank">github</a>
+                    </div>
+                </div>
+                <div class="footer-rss">
+                    <a href="https://rs.school/js-stage0/" target="_blank">Rolling Scopes School</a> 
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./index-custom-video.js"></script>
+</body>
+</html>
