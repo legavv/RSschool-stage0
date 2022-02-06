@@ -91,7 +91,7 @@ h2 {
     display: flex;
     height: 50px;
 }
-.player__play-pause {
+.player__button-play-pause {
     background-image: url(../assets/svg-custom-video/play.svg);
     background-size: 28px;
     background-repeat: no-repeat;
@@ -102,10 +102,10 @@ h2 {
     margin-left: 20px;
     cursor: pointer;
 }
-.player__play-pause:hover {
+.player__button-play-pause:hover {
     background-size: 33px;
 }
-.player__play-pause.pause {
+.player__button-play-pause.pause {
     background-image: url(../assets/svg-custom-video/pause.svg);
     cursor: pointer;
 }
@@ -137,7 +137,7 @@ h2 {
     width: 0;
     background-color: #bdae82;
 }
-.player__mute {
+.player__button-mute {
     background-image: url(../assets/svg-custom-video/mute.svg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -147,10 +147,10 @@ h2 {
     margin: 0 20px 0 20px;
     cursor: pointer;
 }
-.player__mute:hover {
+.player__button-mute:hover {
     background-size: 45px;
 }
-.player__mute.active {
+.player__button-mute.active {
     background-image: url(../assets/svg-custom-video/volume.svg);
     cursor: pointer;
 }
