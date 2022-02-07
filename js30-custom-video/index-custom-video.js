@@ -14,7 +14,6 @@ let playPercent;
 function togglePlay () {
     if (playerViewer.paused) {
     playerViewer.play()
-    playerViewer.volume = playerVolume.value;
     playPauseButton.classList.remove('pause');
     videoBtn.style.display = 'none';
     } else {
