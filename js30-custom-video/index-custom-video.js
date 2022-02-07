@@ -32,13 +32,11 @@ videoBtn.addEventListener('click', () => {
 });
 playPauseButton.addEventListener('click', togglePlay);
 muteButton.addEventListener('click', () => {
-    if (playerViewer.muted) {
+    if (playerViewer.volume === 0) {
         playerViewer.volume = playerVolume.value;
-        playerViewer.muted = false;
         muteButton.classList.remove('active');
     } else {
         playerViewer.volume = 0.0;
-        playerViewer.muted = true;
         muteButton.classList.add('active');
     }
 }); 
