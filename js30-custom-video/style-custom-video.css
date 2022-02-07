@@ -95,13 +95,15 @@ h2 {
     background-size: 28px;
     background-repeat: no-repeat;
     background-position: center center;
-    background-color: #000000;
+    background-color: transparent;
     border: none;
     width: 40px;
     margin-left: 20px;
     cursor: pointer;
 }
 .player__button-play-pause:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
     background-size: 33px;
 }
 .player__button-play-pause.pause {
@@ -137,20 +139,22 @@ h2 {
     background-color: #bdae82;
 }
 .player__button-mute {
-    background-image: url(./assets/svg-custom-video/mute.svg);
+    background-image: url(./assets/svg-custom-video/volume.svg);
     background-repeat: no-repeat;
     background-position: center center;
-    background-color: #000000;
+    background-color: transparent;
     border: none;
     width: 45px;
     margin: 0 20px 0 20px;
     cursor: pointer;
 }
 .player__button-mute:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
     background-size: 45px;
 }
 .player__button-mute.active {
-    background-image: url(./assets/svg-custom-video/volume.svg);
+    background-image: url(./assets/svg-custom-video/mute.svg);
     cursor: pointer;
 }
 .player__volume {
