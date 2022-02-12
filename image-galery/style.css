@@ -45,7 +45,6 @@ a {
 }
 .input {
     display: block;
-    
     background: url(./assets/svg/loupe.svg);
     background-repeat: no-repeat;
     background-position: center right;
@@ -76,6 +75,32 @@ a {
 .line {
     background: #ffa500;
     height: 4px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.image {
+    position: relative;
+    overflow: hidden;
+    /* border: 1px solid #000000; */
+    flex: 0 1 33.3333%;
+    margin-top: 15px;
+    height: 220px;
+}
+.img {
+    padding: 0px 15px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 100%;
+    transform:translate(-50%,-50%);
 }
 .footer__wrapper {
     display: flex;
