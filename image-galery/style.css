@@ -1,0 +1,145 @@
+*, *::before, *::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Comfortaa', cursive;
+    color: #000000;
+}
+h2 {
+    font-size: 100%;
+    font-weight: normal;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+    height: 70px;
+    width: 80%;
+    margin: 0 auto;
+}
+.logo-title {
+    display: flex;
+    height: 40px;
+}
+.logo {
+    background: url(./assets/svg/camera-black.svg);
+    background-repeat: no-repeat;
+    filter: invert(74%) sepia(88%) saturate(2896%) hue-rotate(358deg) brightness(100%) contrast(105%);
+    height: 35px;
+    width: 35px;
+}
+.title {
+    padding: 6px 0 0 10px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.form {
+    width: 350px;
+}
+.input {
+    display: block;
+    background: url(./assets/svg/loupe.svg);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 12% 20px;
+    border: 1px solid #c4c4c4;
+    border-radius: 20px;
+    height: 35px;
+    width: 100%;
+    font-size: 18px;
+    padding-left: 20px;
+}
+.input::-webkit-search-decoration,
+.input::-webkit-search-cancel-button,
+.input::-webkit-search-results-button,
+.input::-webkit-search-results-decoration { 
+    display: none; 
+}
+.input::placeholder {
+    color:gray;
+    font-size: 16px;
+}
+.input:focus, .input:active {
+    transition: 0.5s;
+    border: 0px;
+    outline: 0;
+    box-shadow:0 0 5px 1px rgba(255, 165, 0, 1);;
+}
+.line {
+    background: #ffa500;
+    height: 4px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.image {
+    position: relative;
+    overflow: hidden;
+    /* border: 1px solid #000000; */
+    flex: 0 1 33.3333%;
+    margin-top: 15px;
+    height: 220px;
+}
+.img {
+    padding: 0px 15px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 100%;
+    transform:translate(-50%,-50%);
+}
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+.footer__year-github {
+    display: flex;
+}
+.footer__dev-sign {
+    padding: 62px 0 0 20px;
+    font-size: 20px;
+}
+.footer__year, .footer__github, .footer__rss {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 50px;
+}
+.footer__year {
+    padding: 49px 0 0 20px;
+}
+.footer__github {
+    padding: 49px 0 0 20px;
+    transition: 1s;
+}
+.footer__github:hover {
+    color: #bdae82;
+}
+.footer__rss {
+    width: 100px;
+    padding: 50px 0px 0 14px;
+    transition: 1s;
+}
+.footer__rss:hover {
+    color: #bdae82;
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+}
+.img-rsschool {
+    width: 100%;
+    height: 100%;
+}
