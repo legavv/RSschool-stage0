@@ -1,3 +1,5 @@
+const accessKey = '6NIjmIj9d3y7JRn4PHNQuLD_nlV9vbLhJ0u_fXdsjZY';
+const secretKey = 'JyQUY7LWZHMFvPcciH2h_6_DtHnNMZq56EMvrkVGNGM';
 const input = document.querySelector('.input');
 
 window.onload = function () {
