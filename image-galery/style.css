@@ -21,7 +21,8 @@ a {
     align-items: center;
     margin-top: 0px;
     height: 70px;
-    width: 80%;
+    max-width: 1250px;
+    padding: 0px 15px;
     margin: 0 auto;
 }
 .logo-title {
@@ -48,20 +49,23 @@ a {
     background: url(./assets/svg/loupe.svg);
     background-repeat: no-repeat;
     background-position: center right;
-    background-size: 12% 20px;
+    background-size: 15% 20px;
     border: 1px solid #c4c4c4;
     border-radius: 20px;
     height: 35px;
     width: 100%;
     font-size: 18px;
-    padding-left: 20px;
+    padding: 0px 20px;
 }
-.input::-webkit-search-decoration,
+.input.mute {
+    background: none;
+}
+/* .input::-webkit-search-decoration,
 .input::-webkit-search-cancel-button,
 .input::-webkit-search-results-button,
 .input::-webkit-search-results-decoration { 
     display: none; 
-}
+} */
 .input::placeholder {
     color:gray;
     font-size: 16px;
@@ -89,7 +93,6 @@ a {
 .image {
     position: relative;
     overflow: hidden;
-    /* border: 1px solid #000000; */
     flex: 0 1 33.3333%;
     margin-top: 15px;
     height: 220px;
