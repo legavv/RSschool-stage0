@@ -43,19 +43,28 @@ a {
     position: relative;
     overflow: hidden;
     width: 102px ;
-    height: 160px;
+    height: 155px;
     background: #ffffff;
     margin: 18px 20px;
     border-radius: 20px;
     border: 3px solid #ffa500; 
+    cursor: pointer;
+    transition: transform .5s;
+}
+.card.active {
+    transform: scale(1.1);
+    transition: transform .5s;
 }
 .img {
+    position: absolute;
     width: 100%;
     transform: rotateY(180deg);
 }
 .img-bg {
+    position: absolute;
     height: 100%;
 }
+
 .footer {
     border-top: 4px solid #ffa500;
     margin-top: 15px;
