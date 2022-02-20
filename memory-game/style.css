@@ -8,7 +8,7 @@ body {
     color: #696969;
     background: #ffd59d80;
 }
-h2 {
+h2,h3 {
     font-size: 100%;
     font-weight: normal;
 }
@@ -28,6 +28,31 @@ a {
 }
 .title {
     font-size: 32px;
+}
+.step-count {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 28%;
+    height: 50px;
+    padding-left: 15px;
+    background: #ffdcb5;
+    border: 5px solid #ffffff;
+    border-radius: 30px;
+}
+.name-count {
+    font-weight: 600;
+    font-size: 20px;
+}
+.count {
+    width: 36px;
+    height: 36px;
+    margin-right: 15px;
+    border: 5px solid #ffffff;
+    border-radius: 18px;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
 }
 .wrapper__cards {
     display: flex;
