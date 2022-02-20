@@ -4,6 +4,8 @@ const arrImgFace = [
 ]
 const wrapperCards = document.querySelector('.wrapper__cards');
 const url = './assets/img/'
+let currentOpenImg = '';
+let countOpenCards = 0;
 
 showImages(mixRandomArray(arrImgFace));
 
@@ -17,11 +19,6 @@ function showImages (arrImages) {
     img.setAttribute('src', `${url}${el}.jpg`)
     img.setAttribute('alt', `${el}`)
     card.append(img)
-    const imgBg = document.createElement('img');
-    imgBg.classList.add('img-bg');
-    imgBg.setAttribute('src', `${url}bg.jpg`)
-    imgBg.setAttribute('alt', 'bg')
-    card.append(imgBg)
     })
 }
 function mixRandomArray (arr) {
@@ -41,13 +38,47 @@ function mixRandomArray (arr) {
 }
 function getRandomZeroInt (max) {
     return Math.floor( Math.random() * (max + 1) )
-} 
+}
+function findSameImg (event) {
+    if (currentOpenImg) {
+        if ( currentOpenImg === event.target.childNodes[0].alt ) { //the same alt card but not the same card 
+            cards.forEach((el) => {
+                if (el.className === 'card remove-bg') {
+                    el.classList.remove('remove-bg')
+                    el.classList.add('open')
+                    el.childNodes[0].className += ' view';
+                }
+            })
+            currentOpenImg = '';
+            countOpenCards += 2;
+        } else {
+            cards.forEach((el) => {
+                setTimeout((() => el.classList.remove('remove-bg')), 500)
+            })
+            currentOpenImg = '';
+        }
+    } else {
+        currentOpenImg = event.target.childNodes[0].alt
+        clickLastTarget = event.target;
+    }
+    if (countOpenCards === arrImgFace.length) {
+        countOpenCards = 0;
+        setTimeout((() => {
+            wrapperCards.innerHTML = '';
+            showImages(mixRandomArray(arrImgFace));
+        }), 2000)
+        
+    }
+}
 
-document.querySelectorAll('.card').forEach((el) => {
+const cards = document.querySelectorAll('.card')
+cards.forEach((el) => {
     el.addEventListener('click', (e) => {
-    el.classList.toggle('active')
+        if (el.className !== 'card open' ) {
+            el.classList.add('remove-bg')
+                findSameImg(e)
+        }
     })
 })
 
-// console.log(mixRandomArray(imgName))
 

@@ -49,22 +49,26 @@ a {
     border-radius: 20px;
     border: 3px solid #ffa500; 
     cursor: pointer;
-    transition: transform .5s;
+    transition: all 1s;
+    background-image: url(./assets/img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 220%;
 }
-.card.active {
-    transform: scale(1.1);
-    transition: transform .5s;
+.card.remove-bg {
+    transform: scale(1.1) rotateY(180deg);
+    background-image: none;
+}
+.card.open {
+    background-image: none;
 }
 .img {
     position: absolute;
     width: 100%;
-    transform: rotateY(180deg);
+    z-index: -1;
 }
-.img-bg {
-    position: absolute;
-    height: 100%;
+.img.view {
+    z-index: 1;
 }
-
 .footer {
     border-top: 4px solid #ffa500;
     margin-top: 15px;
