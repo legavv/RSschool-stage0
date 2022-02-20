@@ -49,8 +49,8 @@ function findSameImg (event) {
     countStepGame++
     countStep.textContent = `${countStepGame}`;
     if (currentOpenImg) {
-        if ( currentOpenImg === event.target.childNodes[0].alt ) { //the same alt card but not the same card 
-            cards.forEach((el, index) => {
+        if ( currentOpenImg === event.target.childNodes[0].alt ) { //the same alt card 
+            cards.forEach((el) => {
                 if (el.className === 'card remove-bg') {
                     el.classList.remove('remove-bg')
                     el.classList.add('open')
@@ -61,7 +61,8 @@ function findSameImg (event) {
             countOpenCards += 2;
         } else {
             cards.forEach((el) => {
-                setTimeout((() => el.classList.remove('remove-bg')), 500)
+                setTimeout((() =>{el.classList.remove('remove-bg')} ), 1000)
+                
             })
             currentOpenImg = '';
         }
@@ -72,16 +73,14 @@ function findSameImg (event) {
     if (countOpenCards === arrImgFace.length) {
         countOpenCards = 0;
         countStepGame = 0; 
-        setTimeout((() => {}), 2000) 
-        cards.forEach((el) => {
-            el.classList.remove('open')
-        }); 
-        img.forEach((el) => {
-            el.classList.remove('view')
-        })
-        wrapperCards.innerHTML = '';
-        showImages(mixRandomArray(arrImgFace));
-        addListenerToCards();
+        setTimeout((() => {
+            cards.forEach((el) => {
+                el.classList.remove('open')
+            }); 
+            img.forEach((el) => {
+                el.classList.remove('view')
+            })    
+        }), 2000) 
     }
 }
 function addListenerToCards () {
