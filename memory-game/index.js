@@ -3,8 +3,11 @@ const arrImgFace = [
     'bear', 'elephant', 'hipopotam', 'leopard', 'lion', 'peacock', 'snake', 'walrus', 'zebra'
 ]
 const wrapperCards = document.querySelector('.wrapper__cards');
+const wrapperTopTen = document.querySelector('.wrapper__top-ten')
+const resalts = document.querySelector('.resalts');
 const url = './assets/img/'
 const countStep = document.querySelector('.count')
+let arrTopResalts = [];
 let countStepGame ='';
 let currentOpenImg = '';
 let countOpenCards = 0;
@@ -18,6 +21,9 @@ window.addEventListener('load', ( () => {
         countStepGame = localStorage.getItem('stepsLastGame')
         countStep.textContent = `${countStepGame}`;
         countStepGame = 0;
+        arrTopResalts = JSON.parse( localStorage.getItem('arrTopResalts') )
+        console.log(arrTopResalts)
+        showTopResalts(arrTopResalts);
     }
 }))
 
@@ -78,6 +84,10 @@ function findSameImg (event) {
     }
     if (countOpenCards === arrImgFace.length) {
         localStorage.setItem('stepsLastGame', `${countStepGame}`);
+        if (countStepGame) arrTopResalts.push(countStepGame); //add function
+        arrTopResalts.sort((a, b) => a - b);
+        localStorage.setItem('arrTopResalts', JSON.stringify(arrTopResalts));
+        showTopResalts(arrTopResalts);
         countStep.textContent = `${countStepGame}`;
         countOpenCards = 0;
         countStepGame = 0; 
@@ -100,6 +110,21 @@ function addListenerToCards () {
             }
         })
     })
+}
+function showTopResalts (arrResalts) {
+    resalts.innerHTML = '';
+    arrResalts.forEach((res) => {
+        if (res) {
+            const result = document.createElement('li')
+            result.classList.add('res')
+            result.textContent = `${res}`;
+            resalts.append(result)
+        }
+    })
+
+}
+function insertResaltInTop (currentLastResalt) {
+    
 }
 
 
