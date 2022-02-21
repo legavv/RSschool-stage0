@@ -84,7 +84,7 @@ function findSameImg (event) {
     }
     if (countOpenCards === arrImgFace.length) {
         localStorage.setItem('stepsLastGame', `${countStepGame}`);
-        if (countStepGame) arrTopResalts.push(countStepGame); //add function
+        if (countStepGame) insertResaltInTop (countStepGame, arrTopResalts); //add function
         arrTopResalts.sort((a, b) => a - b);
         localStorage.setItem('arrTopResalts', JSON.stringify(arrTopResalts));
         showTopResalts(arrTopResalts);
@@ -123,8 +123,14 @@ function showTopResalts (arrResalts) {
     })
 
 }
-function insertResaltInTop (currentLastResalt) {
-    
+function insertResaltInTop (currentLastResalt, arr) {
+    if (arr.length < 10) {
+        arr.push(currentLastResalt)
+    } else {
+        if (arr[arr.length - 1] > currentLastResalt) {
+            arr.pop().push(currentLastResalt)
+        }
+    }
 }
 
 
