@@ -5,7 +5,7 @@ const arrImgFace = [
 const wrapperCards = document.querySelector('.wrapper__cards');
 const url = './assets/img/'
 const countStep = document.querySelector('.count')
-let countStepGame = 0;
+let countStepGame ='';
 let currentOpenImg = '';
 let countOpenCards = 0;
 
@@ -13,6 +13,14 @@ showImages(mixRandomArray(arrImgFace));
 const img = document.querySelectorAll('.img')
 const cards = document.querySelectorAll('.card')
 addListenerToCards();
+window.addEventListener('load', ( () => {
+    if (localStorage.getItem('stepsLastGame')) {
+        countStepGame = localStorage.getItem('stepsLastGame')
+        countStep.textContent = `${countStepGame}`;
+        countStepGame = 0;
+    }
+}))
+
 
 function showImages (arrImages) {
     arrImages.forEach((el) => {
@@ -25,7 +33,6 @@ function showImages (arrImages) {
     img.setAttribute('alt', `${el}`)
     card.append(img)
     })
-    countStep.textContent = `${countStepGame}`;
 }
 function mixRandomArray (arr) {
     let randomArr = [];
@@ -46,9 +53,8 @@ function getRandomZeroInt (max) {
     return Math.floor( Math.random() * (max + 1) )
 }
 function findSameImg (event) {
-    countStepGame++
-    countStep.textContent = `${countStepGame}`;
     if (currentOpenImg) {
+        countStepGame++
         if ( currentOpenImg === event.target.childNodes[0].alt ) { //the same alt card 
             cards.forEach((el) => {
                 if (el.className === 'card remove-bg') {
@@ -71,6 +77,8 @@ function findSameImg (event) {
         clickLastTarget = event.target;
     }
     if (countOpenCards === arrImgFace.length) {
+        localStorage.setItem('stepsLastGame', `${countStepGame}`);
+        countStep.textContent = `${countStepGame}`;
         countOpenCards = 0;
         countStepGame = 0; 
         setTimeout((() => {
