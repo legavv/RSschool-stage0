@@ -3,10 +3,11 @@ const arrImgFace = [
     'bear', 'elephant', 'hipopotam', 'leopard', 'lion', 'peacock', 'snake', 'walrus', 'zebra'
 ]
 const wrapperCards = document.querySelector('.wrapper__cards');
-const wrapperTopTen = document.querySelector('.wrapper__top-ten')
+const wrapperTopTen = document.querySelector('.top-ten')
 const resalts = document.querySelector('.resalts');
 const url = './assets/img/'
 const countStep = document.querySelector('.count')
+const button = document.querySelector('.button')
 let arrTopResalts = [];
 let countStepGame ='';
 let currentOpenImg = '';
@@ -15,21 +16,21 @@ let countOpenCards = 0;
 showImages(mixRandomArray(arrImgFace));
 const img = document.querySelectorAll('.img')
 const cards = document.querySelectorAll('.card')
-addListenerToCards();
+addListenerToCards(cards);
 window.addEventListener('load', ( () => {
     if (localStorage.getItem('stepsLastGame')) {
         countStepGame = localStorage.getItem('stepsLastGame')
         countStep.textContent = `${countStepGame}`;
         countStepGame = 0;
         arrTopResalts = JSON.parse( localStorage.getItem('arrTopResalts') )
-        console.log(arrTopResalts)
         showTopResalts(arrTopResalts);
     }
 }))
 
 
-function showImages (arrImages) {
-    arrImages.forEach((el) => {
+///FUNCTION
+function showImages (arr) {
+    arr.forEach((el) => {
     const card = document.createElement('div');
     card.classList.add('card');
     wrapperCards.append(card);
@@ -91,18 +92,11 @@ function findSameImg (event) {
         countStep.textContent = `${countStepGame}`;
         countOpenCards = 0;
         countStepGame = 0; 
-        setTimeout((() => {
-            cards.forEach((el) => {
-                el.classList.remove('open')
-            }); 
-            img.forEach((el) => {
-                el.classList.remove('view')
-            })    
-        }), 2000) 
+
     }
 }
-function addListenerToCards () {
-    cards.forEach((el) => {
+function addListenerToCards (arr) {
+    arr.forEach((el) => {
         el.addEventListener('click', (e) => {
             if (el.className !== 'card open' ) {
                 el.classList.add('remove-bg')
@@ -131,7 +125,24 @@ function insertResaltInTop (currentLastResalt, arr) {
             arr.pop().push(currentLastResalt)
         }
     }
+
 }
 
+
+///LISTENERS
+button.addEventListener('click', () => {
+
+    wrapperCards.innerHTML = '';    
+    showImages(mixRandomArray(arrImgFace));
+    const img = document.querySelectorAll('.img')
+    const cards = document.querySelectorAll('.card')
+    cards.forEach((el) => {
+        el.classList.remove('open')
+    }); 
+    img.forEach((el) => {
+        el.classList.remove('view')
+    })
+    addListenerToCards(cards);
+})
 
 

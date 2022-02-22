@@ -97,9 +97,10 @@ a {
 .img.view {
     z-index: 1;
 }
-.wrapper__top-ten {
+.wrapper__controls {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 12%;
     background: #ffdcb5;
     border: 5px solid #ffffff;
@@ -107,14 +108,22 @@ a {
     margin: 20px 0px;
     padding: 10px;
 }
+.button {
+    font-family: 'Comfortaa', cursive;
+    color: #696969;
+    font-size: 18px;
+    font-weight: 600;
+    height: 40px;
+    background: #ffdcb5;
+    border: 5px solid #ffffff;
+    border-radius: 30px;
+    cursor: pointer;
+}
 .title-top {
     text-align: center;
     font-size: 18px;
     font-weight: 600;
     margin-top: 15px;
-}
-.resalts {
-    /* text-align: center; */
 }
 .res {
     margin-top: 20px;
