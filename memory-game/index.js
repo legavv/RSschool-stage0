@@ -13,6 +13,7 @@ let arrTopResalts = [];
 let stepsLastGame ='';
 let currentOpenImg = '';
 let countOpenCards = 0;
+let isNotClick = true;
 
 showImages(mixRandomArray(arrImgFace));
 const imgs = document.querySelectorAll('.img')
@@ -75,7 +76,11 @@ function findSameImg (event) {
             countOpenCards += 2;
         } else {
             cards.forEach((el) => {
-                setTimeout((() =>{el.classList.remove('remove-bg')} ), 800)
+                isNotClick = false;
+                setTimeout((() =>{
+                    el.classList.remove('remove-bg')
+                    isNotClick = true;
+                }), 800)
                 
             })
             currentOpenImg = '';
@@ -86,7 +91,9 @@ function findSameImg (event) {
     }
     if (countOpenCards === arrImgFace.length) {
         localStorage.setItem('stepsLastGame', `${stepsLastGame}`);
-        if (stepsLastGame) insertResaltInTop (stepsLastGame, arrTopResalts); //add function
+        if (stepsLastGame) {
+            arrTopResalts = insertResaltInTop (stepsLastGame, arrTopResalts);
+        }
         arrTopResalts.sort((a, b) => a - b);
         localStorage.setItem('arrTopResalts', JSON.stringify(arrTopResalts));
         showTopResalts(arrTopResalts);
@@ -107,15 +114,16 @@ function showTopResalts (arrResalts) {
     })
 
 }
-function insertResaltInTop (currentLastResalt, arr) {
+function insertResaltInTop (lastResult, arr) {
     if (arr.length < 10) {
-        arr.push(currentLastResalt)
+        arr.push(lastResult)
     } else {
-        if (arr[arr.length - 1] > currentLastResalt) {
-            arr.pop().push(currentLastResalt)
+        if (arr[arr.length - 1] > lastResult) {
+            arr.pop()
+            arr.push(lastResult)
         }
     }
-
+    return arr;
 }
 
 
@@ -123,8 +131,10 @@ function insertResaltInTop (currentLastResalt, arr) {
 cards.forEach((el) => {
     el.addEventListener('click', (e) => {
         if (el.className !== 'card open' ) {
-            el.classList.add('remove-bg')
-            findSameImg(e)
+            if (isNotClick) {
+                el.classList.add('remove-bg')
+                findSameImg(e)
+            }
         }
     })
 })
